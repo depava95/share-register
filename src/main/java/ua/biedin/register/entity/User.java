@@ -1,25 +1,29 @@
 package ua.biedin.register.entity;
 
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.HashSet;
-import java.util.Set;
 
 @Entity
 @Data
-@Table(name = "user")
+@AllArgsConstructor
+@Builder
+@NoArgsConstructor
+@Table(name = "users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
-    @Column(name = "login", nullable = false)
+    @Column(name = "login")
     private String login;
-    @Column(name = "password", nullable = false)
+    @Column(name = "password")
     private String password;
-
-    //TODO OneToMany
-//    @Enumerated(EnumType.STRING)
-//    Set<UserRole> roles = new HashSet<>();
+    @Column(name = "role_id")
+    @Enumerated(EnumType.ORDINAL)
+    UserRole role;
 }

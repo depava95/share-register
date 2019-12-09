@@ -14,8 +14,10 @@ spring:
       ddl-auto: none
 
 
-
 #ADDITIONAL VALUES
+sharedb: true
+
+
 register:
   content:
     pageSize: 10

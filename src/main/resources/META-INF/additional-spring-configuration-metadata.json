@@ -4,5 +4,10 @@
       "name": "register.content.pageSize",
       "type": "java.lang.String",
       "description": "Temporal test ;)."
-  }
-] }
+    },
+    {
+      "name": "sharedb",
+      "type": "java.lang.String",
+      "description": "Set TRUE if you want to initialize your db with testing data."
+    }
+  ] }

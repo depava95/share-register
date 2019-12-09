@@ -1,0 +1,134 @@
+databaseChangeLog:
+  - logicalFilePath: /db/changelog/db.changelog-master.yaml
+  - changeSet:
+      id: 1
+      author: ihor_biedin
+      changes:
+        - createTable:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: login
+                  type: varchar(50)
+                  constraints:
+                    unique: true
+                    nullable: false
+              - column:
+                  name: password
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: role_id
+                  type: BIGINT
+                  constraints:
+#                    foreignKeyName: fk_user_id
+#                    references: roles(id)
+                    nullable: false
+  - changeSet:
+      id: 2
+      author: ihor_biedin
+      changes:
+        - createTable:
+            tableName: company_share
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: comment
+                  type: varchar(255)
+              - column:
+                  name: capital_size
+                  type: INT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: usreou
+                  type: INT
+                  constraints:
+                    unique: true
+                    nullable: false
+              - column:
+                  name: amount
+                  type: INT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: total_value
+                  type: NUMERIC
+                  constraints:
+                    nullable: false
+              - column:
+                  name: face_value
+                  type: NUMERIC
+                  constraints:
+                    nullable: false
+              - column:
+                  name: duty_paid
+                  type: NUMERIC
+                  constraints:
+                    nullable: false
+              - column:
+                  name: release_date
+                  type: timestamp
+                  defaultValueComputed: CURRENT_TIMESTAMP
+                  constraints:
+                    nullable: false
+
+  - changeSet:
+      id: 3
+      author: ihor_biedin
+      changes:
+        - createTable:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: role
+                  type: varchar(10)
+                  constraints:
+                    nullable: false
+
+  - changeSet:
+      id: 4
+      author: ihor_biedin
+      changes:
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: role
+                  value: "ADMIN"
+
+  - changeSet:
+      id: 5
+      author: ihor_biedin
+      changes:
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: role
+                  value: "USER"
+
+
+
+
