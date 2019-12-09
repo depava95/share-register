@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "register.content.pageSize",
+      "type": "java.lang.String",
+      "description": "Temporal test ;)."
+  }
+] }
