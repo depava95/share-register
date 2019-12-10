@@ -30,7 +30,7 @@ public class DatabaseInitializer implements CommandLineRunner {
     Faker faker = new Faker();
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
 
         companyShareRepo.deleteAll();
         userRepo.deleteAll();
@@ -47,7 +47,6 @@ public class DatabaseInitializer implements CommandLineRunner {
                     .build();
             companyShareRepo.save(share);
             log.info(share.toString().concat(" Successfully inserted"));
-
         }
 
         User admin = User.builder()
@@ -56,7 +55,7 @@ public class DatabaseInitializer implements CommandLineRunner {
                 .role(UserRole.ADMIN)
                 .build();
         userRepo.save(admin);
-        log.info("ADMIN successfully inserted");
+        log.info("ADMIN successfully inserted - Don't forget to change the value sharedb to FALSE");
 
         User user = User.builder()
                 .login(faker.name().username())
@@ -64,6 +63,6 @@ public class DatabaseInitializer implements CommandLineRunner {
                 .role(UserRole.USER)
                 .build();
         userRepo.save(user);
-        log.info("USER successfully inserted");
+        log.info("USER successfully inserted - Don't forget to change the value sharedb to FALSE");
     }
 }

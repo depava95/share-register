@@ -15,7 +15,7 @@ spring:
 
 
 #ADDITIONAL VALUES
-sharedb: true
+sharedb: false
 
 
 register:
