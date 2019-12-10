@@ -11,6 +11,7 @@ import ua.biedin.register.entity.User;
 import ua.biedin.register.repository.RoleRepository;
 import ua.biedin.register.repository.UserRepository;
 import ua.biedin.register.service.UserService;
+import ua.biedin.register.util.Constants;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +35,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User register(User user) {
-        Roles role = roleRepository.findByName("USER");
+        Roles role = roleRepository.findByName(Constants.USER_ROLE);
         List<Roles> rolesList = new ArrayList<>();
         rolesList.add(role);
         //TODO Проверить работу кодировки пароля

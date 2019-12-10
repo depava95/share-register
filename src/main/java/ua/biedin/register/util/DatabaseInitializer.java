@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 import ua.biedin.register.entity.CompanyShare;
 import ua.biedin.register.entity.User;
@@ -21,12 +22,14 @@ public class DatabaseInitializer implements CommandLineRunner {
 
     private final UserRepository userRepo;
     private final CompanyShareRepository companyShareRepo;
+    private final BCryptPasswordEncoder encoder;
 
 
     @Autowired
-    public DatabaseInitializer(UserRepository userRepo, CompanyShareRepository companyShareRepo) {
+    public DatabaseInitializer(UserRepository userRepo, CompanyShareRepository companyShareRepo, BCryptPasswordEncoder encoder) {
         this.userRepo = userRepo;
         this.companyShareRepo = companyShareRepo;
+        this.encoder = encoder;
     }
 
     Faker faker = new Faker();
@@ -53,14 +56,16 @@ public class DatabaseInitializer implements CommandLineRunner {
 
         User admin = User.builder()
                 .login(faker.name().username())
-                .password(faker.internet().password())
+                .password(encoder.encode(faker.internet().password()))
+                .roles(List.of(new Roles("ROLE_ADMIN"), new Roles("ROLE_USER")))
                 .build();
         userRepo.save(admin);
         log.info("ADMIN successfully inserted - Don't forget to change the value sharedb to FALSE");
 
         User user = User.builder()
                 .login(faker.name().username())
-                .password(faker.internet().password())
+                .password(encoder.encode(faker.internet().password()))
+                .roles(List.of(new Roles("ROLE_USER")))
                 .build();
         userRepo.save(user);
         log.info("USER successfully inserted - Don't forget to change the value sharedb to FALSE");

@@ -76,7 +76,7 @@ databaseChangeLog:
                     primaryKey: true
                     nullable: false
               - column:
-                  name: role
+                  name: name
                   type: varchar(10)
                   constraints:
                     nullable: false
@@ -105,33 +105,6 @@ databaseChangeLog:
                   type: varchar(100)
                   constraints:
                     nullable: false
-              - column:
-                  name: role_id
-                  type: BIGINT
-                  constraints:
-                    nullable: false
-
-  - changeSet:
-      id: 4
-      author: ihor_biedin
-      changes:
-        - insert:
-            tableName: roles
-            columns:
-              - column:
-                  name: role
-                  value: "ADMIN"
-
-  - changeSet:
-      id: 5
-      author: ihor_biedin
-      changes:
-        - insert:
-            tableName: roles
-            columns:
-              - column:
-                  name: role
-                  value: "USER"
 
   - changeSet:
       id: 6
@@ -154,6 +127,30 @@ databaseChangeLog:
                     foreignKeyName: fk_roles_id
                     references: roles(id)
                     nullable: false
+
+  - changeSet:
+      id: 4
+      author: ihor_biedin
+      changes:
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: name
+                  value: "ROLE_ADMIN"
+
+  - changeSet:
+      id: 5
+      author: ihor_biedin
+      changes:
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: name
+                  value: "ROLE_USER"
+
+
 
 
 

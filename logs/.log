@@ -983,3 +983,1079 @@ Using generated security password: 63946e71-da68-4e3f-8d31-d2f4ee069b3f
 2019-12-10 17:11:53,543 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringContextShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
 2019-12-10 17:11:53,552 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
 2019-12-10 17:11:53,570 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
+2019-12-10 20:48:57,423 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting RegisterApplication on ihor-notebook with PID 25813 (/home/ihor/IdeaProjects/register/target/classes started by ihor in /home/ihor/IdeaProjects/register)
+2019-12-10 20:48:57,428 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2019-12-10 20:48:57,429 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-12-10 20:48:57,485 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in /home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2019-12-10 20:48:57,486 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-10 20:48:57,486 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-10 20:48:58,202 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2019-12-10 20:48:58,278 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 68ms. Found 3 JPA repository interfaces.
+2019-12-10 20:48:58,623 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-10 20:48:58,949 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 9090 (http)
+2019-12-10 20:48:58,959 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-9090"]
+2019-12-10 20:48:58,960 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2019-12-10 20:48:58,960 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-10 20:48:59,027 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2019-12-10 20:48:59,028 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1542 ms
+2019-12-10 20:48:59,140 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2019-12-10 20:48:59,288 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2019-12-10 20:49:00,014 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOGLOCK
+2019-12-10 20:49:00,033 INFO liquibase.logging.core.Slf4jLogger [restartedMain] CREATE TABLE sharedb.DATABASECHANGELOGLOCK (ID INT NOT NULL, `LOCKED` BIT(1) NOT NULL, LOCKGRANTED datetime NULL, LOCKEDBY VARCHAR(255) NULL, CONSTRAINT PK_DATABASECHANGELOGLOCK PRIMARY KEY (ID))
+2019-12-10 20:49:00,077 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOGLOCK
+2019-12-10 20:49:00,094 INFO liquibase.logging.core.Slf4jLogger [restartedMain] DELETE FROM sharedb.DATABASECHANGELOGLOCK
+2019-12-10 20:49:00,097 INFO liquibase.logging.core.Slf4jLogger [restartedMain] INSERT INTO sharedb.DATABASECHANGELOGLOCK (ID, `LOCKED`) VALUES (1, 0)
+2019-12-10 20:49:00,107 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT `LOCKED` FROM sharedb.DATABASECHANGELOGLOCK WHERE ID=1
+2019-12-10 20:49:00,127 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Successfully acquired change log lock
+2019-12-10 20:49:01,727 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Creating database history table with name: sharedb.DATABASECHANGELOG
+2019-12-10 20:49:01,729 INFO liquibase.logging.core.Slf4jLogger [restartedMain] CREATE TABLE sharedb.DATABASECHANGELOG (ID VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, FILENAME VARCHAR(255) NOT NULL, DATEEXECUTED datetime NOT NULL, ORDEREXECUTED INT NOT NULL, EXECTYPE VARCHAR(10) NOT NULL, MD5SUM VARCHAR(35) NULL, `DESCRIPTION` VARCHAR(255) NULL, COMMENTS VARCHAR(255) NULL, TAG VARCHAR(255) NULL, LIQUIBASE VARCHAR(20) NULL, CONTEXTS VARCHAR(255) NULL, LABELS VARCHAR(255) NULL, DEPLOYMENT_ID VARCHAR(10) NULL)
+2019-12-10 20:49:01,766 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOG
+2019-12-10 20:49:01,772 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Reading from sharedb.DATABASECHANGELOG
+2019-12-10 20:49:01,774 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT * FROM sharedb.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2019-12-10 20:49:01,778 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOGLOCK
+2019-12-10 20:49:01,853 INFO liquibase.logging.core.Slf4jLogger [restartedMain] CREATE TABLE sharedb.company_share (id BIGINT AUTO_INCREMENT NOT NULL, comment VARCHAR(255) NULL, capital_size INT NOT NULL, usreou INT NOT NULL, amount INT NOT NULL, total_value numeric NOT NULL, face_value numeric NOT NULL, duty_paid numeric NOT NULL, release_date timestamp DEFAULT NOW() NOT NULL, is_deleted INT DEFAULT 0 NOT NULL, CONSTRAINT PK_COMPANY_SHARE PRIMARY KEY (id), UNIQUE (usreou))
+2019-12-10 20:49:01,893 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Table company_share created
+2019-12-10 20:49:01,895 INFO liquibase.logging.core.Slf4jLogger [restartedMain] ChangeSet classpath:db/changelog/db.changelog-master.yaml::1::ihor_biedin ran successfully in 47ms
+2019-12-10 20:49:01,898 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT MAX(ORDEREXECUTED) FROM sharedb.DATABASECHANGELOG
+2019-12-10 20:49:01,903 INFO liquibase.logging.core.Slf4jLogger [restartedMain] INSERT INTO sharedb.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, `DESCRIPTION`, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('1', 'ihor_biedin', 'classpath:db/changelog/db.changelog-master.yaml', NOW(), 1, '8:c993c3ffcdead7f2120a4e98c390827a', 'createTable tableName=company_share', '', 'EXECUTED', NULL, NULL, '3.8.2', '6003741781')
+2019-12-10 20:49:01,917 INFO liquibase.logging.core.Slf4jLogger [restartedMain] CREATE TABLE sharedb.roles (id BIGINT AUTO_INCREMENT NOT NULL, `role` VARCHAR(10) NOT NULL, CONSTRAINT PK_ROLES PRIMARY KEY (id))
+2019-12-10 20:49:01,953 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Table roles created
+2019-12-10 20:49:01,954 INFO liquibase.logging.core.Slf4jLogger [restartedMain] ChangeSet classpath:db/changelog/db.changelog-master.yaml::2::ihor_biedin ran successfully in 40ms
+2019-12-10 20:49:01,957 INFO liquibase.logging.core.Slf4jLogger [restartedMain] INSERT INTO sharedb.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, `DESCRIPTION`, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('2', 'ihor_biedin', 'classpath:db/changelog/db.changelog-master.yaml', NOW(), 2, '8:dbb996c19277df6926e0749ffe5fdc7c', 'createTable tableName=roles', '', 'EXECUTED', NULL, NULL, '3.8.2', '6003741781')
+2019-12-10 20:49:01,970 INFO liquibase.logging.core.Slf4jLogger [restartedMain] CREATE TABLE sharedb.users (id BIGINT AUTO_INCREMENT NOT NULL, login VARCHAR(50) NOT NULL, password VARCHAR(100) NOT NULL, role_id BIGINT NOT NULL, CONSTRAINT PK_USERS PRIMARY KEY (id), UNIQUE (login))
+2019-12-10 20:49:02,015 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Table users created
+2019-12-10 20:49:02,017 INFO liquibase.logging.core.Slf4jLogger [restartedMain] ChangeSet classpath:db/changelog/db.changelog-master.yaml::3::ihor_biedin ran successfully in 50ms
+2019-12-10 20:49:02,019 INFO liquibase.logging.core.Slf4jLogger [restartedMain] INSERT INTO sharedb.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, `DESCRIPTION`, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('3', 'ihor_biedin', 'classpath:db/changelog/db.changelog-master.yaml', NOW(), 3, '8:639c9e1476f62986ebdcf531cb16134c', 'createTable tableName=users', '', 'EXECUTED', NULL, NULL, '3.8.2', '6003741781')
+2019-12-10 20:49:02,031 INFO liquibase.logging.core.Slf4jLogger [restartedMain] INSERT INTO sharedb.roles (`role`) VALUES ('ROLE_ADMIN')
+2019-12-10 20:49:02,036 INFO liquibase.logging.core.Slf4jLogger [restartedMain] New row inserted into roles
+2019-12-10 20:49:02,042 INFO liquibase.logging.core.Slf4jLogger [restartedMain] ChangeSet classpath:db/changelog/db.changelog-master.yaml::4::ihor_biedin ran successfully in 14ms
+2019-12-10 20:49:02,045 INFO liquibase.logging.core.Slf4jLogger [restartedMain] INSERT INTO sharedb.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, `DESCRIPTION`, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('4', 'ihor_biedin', 'classpath:db/changelog/db.changelog-master.yaml', NOW(), 4, '8:834c4a3d34c81e6228124b1827610e7e', 'insert tableName=roles', '', 'EXECUTED', NULL, NULL, '3.8.2', '6003741781')
+2019-12-10 20:49:02,056 INFO liquibase.logging.core.Slf4jLogger [restartedMain] INSERT INTO sharedb.roles (`role`) VALUES ('ROLE_USER')
+2019-12-10 20:49:02,058 INFO liquibase.logging.core.Slf4jLogger [restartedMain] New row inserted into roles
+2019-12-10 20:49:02,063 INFO liquibase.logging.core.Slf4jLogger [restartedMain] ChangeSet classpath:db/changelog/db.changelog-master.yaml::5::ihor_biedin ran successfully in 9ms
+2019-12-10 20:49:02,065 INFO liquibase.logging.core.Slf4jLogger [restartedMain] INSERT INTO sharedb.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, `DESCRIPTION`, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('5', 'ihor_biedin', 'classpath:db/changelog/db.changelog-master.yaml', NOW(), 5, '8:5b872e7119d31fd398eee1c37418e3ce', 'insert tableName=roles', '', 'EXECUTED', NULL, NULL, '3.8.2', '6003741781')
+2019-12-10 20:49:02,072 INFO liquibase.logging.core.Slf4jLogger [restartedMain] CREATE TABLE sharedb.user_roles (user_id BIGINT NOT NULL, roles_id BIGINT NOT NULL, CONSTRAINT fk_user_id FOREIGN KEY (user_id) REFERENCES sharedb.users(id), CONSTRAINT fk_roles_id FOREIGN KEY (roles_id) REFERENCES sharedb.roles(id))
+2019-12-10 20:49:02,111 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Table user_roles created
+2019-12-10 20:49:02,112 INFO liquibase.logging.core.Slf4jLogger [restartedMain] ChangeSet classpath:db/changelog/db.changelog-master.yaml::6::ihor_biedin ran successfully in 41ms
+2019-12-10 20:49:02,114 INFO liquibase.logging.core.Slf4jLogger [restartedMain] INSERT INTO sharedb.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, `DESCRIPTION`, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('6', 'ihor_biedin', 'classpath:db/changelog/db.changelog-master.yaml', NOW(), 6, '8:f2a4eaa0c616e74f1853345659fc5ebf', 'createTable tableName=user_roles', '', 'EXECUTED', NULL, NULL, '3.8.2', '6003741781')
+2019-12-10 20:49:02,128 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Successfully released change log lock
+2019-12-10 20:49:02,269 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-12-10 20:49:02,330 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.4.9.Final}
+2019-12-10 20:49:02,424 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-12-10 20:49:02,513 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-12-10 20:49:03,118 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-10 20:49:03,124 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-10 20:49:03,412 ERROR org.springframework.boot.web.embedded.tomcat.TomcatStarter [restartedMain] Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtTokenFilter' defined in file [/home/ihor/IdeaProjects/register/target/classes/ua/biedin/register/security/jwt/JwtTokenFilter.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtTokenProvider' defined in file [/home/ihor/IdeaProjects/register/target/classes/ua/biedin/register/security/jwt/JwtTokenProvider.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtUserDetailsService' defined in file [/home/ihor/IdeaProjects/register/target/classes/ua/biedin/register/security/JwtUserDetailsService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [/home/ihor/IdeaProjects/register/target/classes/ua/biedin/register/service/impl/UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'jwtTokenProvider': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2019-12-10 20:49:03,428 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2019-12-10 20:49:03,432 WARN org.apache.juli.logging.DirectJDKLog [restartedMain] The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.4/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.4/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.4/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.4/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@11.0.4/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@11.0.4/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+ java.base@11.0.4/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.4/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.4/java.lang.Thread.run(Thread.java:834)
+2019-12-10 20:49:03,433 WARN org.apache.juli.logging.DirectJDKLog [restartedMain] The web application [ROOT] appears to have started a thread named [HikariPool-1 connection adder] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.4/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.4/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.4/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.4/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:458)
+ java.base@11.0.4/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1053)
+ java.base@11.0.4/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.4/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.4/java.lang.Thread.run(Thread.java:834)
+2019-12-10 20:49:03,435 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2019-12-10 20:49:03,436 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-10 20:49:03,439 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown initiated...
+2019-12-10 20:49:03,448 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown completed.
+2019-12-10 20:49:03,460 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-10 20:49:03,463 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+   jwtTokenFilter defined in file [/home/ihor/IdeaProjects/register/target/classes/ua/biedin/register/security/jwt/JwtTokenFilter.class]
+┌─────┐
+|  jwtTokenProvider defined in file [/home/ihor/IdeaProjects/register/target/classes/ua/biedin/register/security/jwt/JwtTokenProvider.class]
+↑     ↓
+|  jwtUserDetailsService defined in file [/home/ihor/IdeaProjects/register/target/classes/ua/biedin/register/security/JwtUserDetailsService.class]
+↑     ↓
+|  userServiceImpl defined in file [/home/ihor/IdeaProjects/register/target/classes/ua/biedin/register/service/impl/UserServiceImpl.class]
+└─────┘
+
+
+2019-12-10 20:50:19,559 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting RegisterApplication on ihor-notebook with PID 26026 (/home/ihor/IdeaProjects/register/target/classes started by ihor in /home/ihor/IdeaProjects/register)
+2019-12-10 20:50:19,563 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2019-12-10 20:50:19,564 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-12-10 20:50:19,642 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in /home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2019-12-10 20:50:19,643 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-10 20:50:19,643 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-10 20:50:20,630 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2019-12-10 20:50:20,702 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 64ms. Found 3 JPA repository interfaces.
+2019-12-10 20:50:21,158 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-10 20:50:21,641 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 9090 (http)
+2019-12-10 20:50:21,652 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-9090"]
+2019-12-10 20:50:21,652 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2019-12-10 20:50:21,653 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-10 20:50:21,731 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2019-12-10 20:50:21,732 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2088 ms
+2019-12-10 20:50:21,867 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2019-12-10 20:50:22,000 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2019-12-10 20:50:22,723 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOGLOCK
+2019-12-10 20:50:22,732 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOGLOCK
+2019-12-10 20:50:22,736 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT `LOCKED` FROM sharedb.DATABASECHANGELOGLOCK WHERE ID=1
+2019-12-10 20:50:22,754 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Successfully acquired change log lock
+2019-12-10 20:50:24,358 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT MD5SUM FROM sharedb.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2019-12-10 20:50:24,360 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOG
+2019-12-10 20:50:24,362 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Reading from sharedb.DATABASECHANGELOG
+2019-12-10 20:50:24,362 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT * FROM sharedb.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2019-12-10 20:50:24,393 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Successfully released change log lock
+2019-12-10 20:50:24,462 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-12-10 20:50:24,516 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.4.9.Final}
+2019-12-10 20:50:24,611 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-12-10 20:50:24,695 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-12-10 20:50:25,290 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-10 20:50:25,297 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-10 20:50:25,611 ERROR org.springframework.boot.web.embedded.tomcat.TomcatStarter [restartedMain] Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtTokenFilter' defined in file [/home/ihor/IdeaProjects/register/target/classes/ua/biedin/register/security/jwt/JwtTokenFilter.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtTokenProvider' defined in file [/home/ihor/IdeaProjects/register/target/classes/ua/biedin/register/security/jwt/JwtTokenProvider.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtUserDetailsService' defined in file [/home/ihor/IdeaProjects/register/target/classes/ua/biedin/register/security/JwtUserDetailsService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [/home/ihor/IdeaProjects/register/target/classes/ua/biedin/register/service/impl/UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'jwtTokenProvider': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2019-12-10 20:50:25,628 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2019-12-10 20:50:25,632 WARN org.apache.juli.logging.DirectJDKLog [restartedMain] The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.4/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.4/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.4/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.4/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@11.0.4/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@11.0.4/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+ java.base@11.0.4/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.4/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.4/java.lang.Thread.run(Thread.java:834)
+2019-12-10 20:50:25,633 WARN org.apache.juli.logging.DirectJDKLog [restartedMain] The web application [ROOT] appears to have started a thread named [HikariPool-1 connection adder] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.4/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.4/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.4/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.4/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:458)
+ java.base@11.0.4/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1053)
+ java.base@11.0.4/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.4/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.4/java.lang.Thread.run(Thread.java:834)
+2019-12-10 20:50:25,635 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2019-12-10 20:50:25,636 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-10 20:50:25,639 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown initiated...
+2019-12-10 20:50:25,647 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown completed.
+2019-12-10 20:50:25,661 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-10 20:50:25,665 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+   jwtTokenFilter defined in file [/home/ihor/IdeaProjects/register/target/classes/ua/biedin/register/security/jwt/JwtTokenFilter.class]
+┌─────┐
+|  jwtTokenProvider defined in file [/home/ihor/IdeaProjects/register/target/classes/ua/biedin/register/security/jwt/JwtTokenProvider.class]
+↑     ↓
+|  jwtUserDetailsService defined in file [/home/ihor/IdeaProjects/register/target/classes/ua/biedin/register/security/JwtUserDetailsService.class]
+↑     ↓
+|  userServiceImpl defined in file [/home/ihor/IdeaProjects/register/target/classes/ua/biedin/register/service/impl/UserServiceImpl.class]
+└─────┘
+
+
+2019-12-10 20:52:24,853 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting RegisterApplication on ihor-notebook with PID 26275 (/home/ihor/IdeaProjects/register/target/classes started by ihor in /home/ihor/IdeaProjects/register)
+2019-12-10 20:52:24,857 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2019-12-10 20:52:24,857 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-12-10 20:52:24,906 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in /home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2019-12-10 20:52:24,907 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-10 20:52:24,907 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-10 20:52:25,737 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2019-12-10 20:52:25,819 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 73ms. Found 3 JPA repository interfaces.
+2019-12-10 20:52:26,257 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-10 20:52:26,567 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 9090 (http)
+2019-12-10 20:52:26,580 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-9090"]
+2019-12-10 20:52:26,581 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2019-12-10 20:52:26,581 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-10 20:52:26,652 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2019-12-10 20:52:26,653 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1746 ms
+2019-12-10 20:52:26,772 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2019-12-10 20:52:26,948 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2019-12-10 20:52:27,725 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOGLOCK
+2019-12-10 20:52:27,734 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOGLOCK
+2019-12-10 20:52:27,737 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT `LOCKED` FROM sharedb.DATABASECHANGELOGLOCK WHERE ID=1
+2019-12-10 20:52:27,755 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Successfully acquired change log lock
+2019-12-10 20:52:29,460 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT MD5SUM FROM sharedb.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2019-12-10 20:52:29,462 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOG
+2019-12-10 20:52:29,464 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Reading from sharedb.DATABASECHANGELOG
+2019-12-10 20:52:29,464 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT * FROM sharedb.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2019-12-10 20:52:29,496 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Successfully released change log lock
+2019-12-10 20:52:29,573 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-12-10 20:52:29,637 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.4.9.Final}
+2019-12-10 20:52:29,760 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-12-10 20:52:29,865 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-12-10 20:52:30,637 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-10 20:52:30,645 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-10 20:52:31,168 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig' defined in file [/home/ihor/IdeaProjects/register/target/classes/ua/biedin/register/config/SecurityConfig.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtTokenProvider' defined in file [/home/ihor/IdeaProjects/register/target/classes/ua/biedin/register/security/jwt/JwtTokenProvider.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtUserDetailsService' defined in file [/home/ihor/IdeaProjects/register/target/classes/ua/biedin/register/security/JwtUserDetailsService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [/home/ihor/IdeaProjects/register/target/classes/ua/biedin/register/service/impl/UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'jwtTokenProvider': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2019-12-10 20:52:31,169 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-10 20:52:31,174 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown initiated...
+2019-12-10 20:52:31,188 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown completed.
+2019-12-10 20:52:31,193 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2019-12-10 20:52:31,213 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-10 20:52:31,216 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+   securityConfig defined in file [/home/ihor/IdeaProjects/register/target/classes/ua/biedin/register/config/SecurityConfig.class]
+┌─────┐
+|  jwtTokenProvider defined in file [/home/ihor/IdeaProjects/register/target/classes/ua/biedin/register/security/jwt/JwtTokenProvider.class]
+↑     ↓
+|  jwtUserDetailsService defined in file [/home/ihor/IdeaProjects/register/target/classes/ua/biedin/register/security/JwtUserDetailsService.class]
+↑     ↓
+|  userServiceImpl defined in file [/home/ihor/IdeaProjects/register/target/classes/ua/biedin/register/service/impl/UserServiceImpl.class]
+└─────┘
+
+
+2019-12-10 20:54:05,995 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting RegisterApplication on ihor-notebook with PID 26418 (/home/ihor/IdeaProjects/register/target/classes started by ihor in /home/ihor/IdeaProjects/register)
+2019-12-10 20:54:05,999 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2019-12-10 20:54:06,001 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-12-10 20:54:06,055 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in /home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2019-12-10 20:54:06,056 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-10 20:54:06,056 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-10 20:54:06,786 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2019-12-10 20:54:06,866 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 71ms. Found 3 JPA repository interfaces.
+2019-12-10 20:54:07,260 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-10 20:54:07,565 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 9090 (http)
+2019-12-10 20:54:07,576 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-9090"]
+2019-12-10 20:54:07,577 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2019-12-10 20:54:07,577 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-10 20:54:07,655 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2019-12-10 20:54:07,655 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1599 ms
+2019-12-10 20:54:07,771 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2019-12-10 20:54:07,911 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2019-12-10 20:54:08,771 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOGLOCK
+2019-12-10 20:54:08,779 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOGLOCK
+2019-12-10 20:54:08,782 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT `LOCKED` FROM sharedb.DATABASECHANGELOGLOCK WHERE ID=1
+2019-12-10 20:54:08,799 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Successfully acquired change log lock
+2019-12-10 20:54:10,603 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT MD5SUM FROM sharedb.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2019-12-10 20:54:10,605 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOG
+2019-12-10 20:54:10,606 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Reading from sharedb.DATABASECHANGELOG
+2019-12-10 20:54:10,607 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT * FROM sharedb.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2019-12-10 20:54:10,637 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Successfully released change log lock
+2019-12-10 20:54:10,712 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-12-10 20:54:10,769 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.4.9.Final}
+2019-12-10 20:54:10,870 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-12-10 20:54:10,949 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-12-10 20:54:11,493 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-10 20:54:11,499 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-10 20:54:11,827 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-10 20:54:12,109 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-10 20:54:12,468 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6a55a403, org.springframework.security.web.context.SecurityContextPersistenceFilter@645137cb, org.springframework.security.web.header.HeaderWriterFilter@5d7666f3, org.springframework.security.web.authentication.logout.LogoutFilter@4186124f, ua.biedin.register.security.jwt.JwtTokenFilter@52ae3f69, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@217b91d1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@628a6a46, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2096ffa7, org.springframework.security.web.session.SessionManagementFilter@13631175, org.springframework.security.web.access.ExceptionTranslationFilter@15062977, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@10e882ee]
+2019-12-10 20:54:12,504 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2019-12-10 20:54:12,536 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-9090"]
+2019-12-10 20:54:12,556 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 9090 (http) with context path ''
+2019-12-10 20:54:12,559 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started RegisterApplication in 7.246 seconds (JVM running for 8.36)
+2019-12-10 20:54:30,634 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-10 20:54:30,637 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringContextShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-10 20:54:30,642 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
+2019-12-10 20:54:30,651 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
+2019-12-10 20:54:35,995 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting RegisterApplication on ihor-notebook with PID 26629 (/home/ihor/IdeaProjects/register/target/classes started by ihor in /home/ihor/IdeaProjects/register)
+2019-12-10 20:54:35,998 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2019-12-10 20:54:36,000 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-12-10 20:54:36,047 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in /home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2019-12-10 20:54:36,048 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-10 20:54:36,048 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-10 20:54:36,760 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2019-12-10 20:54:36,832 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 63ms. Found 3 JPA repository interfaces.
+2019-12-10 20:54:37,158 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-10 20:54:37,455 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 9090 (http)
+2019-12-10 20:54:37,464 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-9090"]
+2019-12-10 20:54:37,465 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2019-12-10 20:54:37,465 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-10 20:54:37,529 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2019-12-10 20:54:37,530 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1481 ms
+2019-12-10 20:54:37,634 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2019-12-10 20:54:37,762 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2019-12-10 20:54:38,498 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOGLOCK
+2019-12-10 20:54:38,505 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOGLOCK
+2019-12-10 20:54:38,508 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT `LOCKED` FROM sharedb.DATABASECHANGELOGLOCK WHERE ID=1
+2019-12-10 20:54:38,526 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Successfully acquired change log lock
+2019-12-10 20:54:40,108 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT MD5SUM FROM sharedb.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2019-12-10 20:54:40,110 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOG
+2019-12-10 20:54:40,112 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Reading from sharedb.DATABASECHANGELOG
+2019-12-10 20:54:40,112 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT * FROM sharedb.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2019-12-10 20:54:40,144 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Successfully released change log lock
+2019-12-10 20:54:40,256 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-12-10 20:54:40,309 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.4.9.Final}
+2019-12-10 20:54:40,403 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-12-10 20:54:40,480 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-12-10 20:54:41,050 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-10 20:54:41,057 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-10 20:54:41,382 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-10 20:54:41,647 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-10 20:54:42,018 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7d0acc5, org.springframework.security.web.context.SecurityContextPersistenceFilter@3ffba791, org.springframework.security.web.header.HeaderWriterFilter@30870bac, org.springframework.security.web.authentication.logout.LogoutFilter@319914a1, ua.biedin.register.security.jwt.JwtTokenFilter@15f3fc81, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1862202a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6aeb187f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4c705203, org.springframework.security.web.session.SessionManagementFilter@4a050e18, org.springframework.security.web.access.ExceptionTranslationFilter@4b783a5c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@12210da0]
+2019-12-10 20:54:42,057 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2019-12-10 20:54:42,091 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-9090"]
+2019-12-10 20:54:42,110 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 9090 (http) with context path ''
+2019-12-10 20:54:42,113 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started RegisterApplication in 6.768 seconds (JVM running for 7.842)
+2019-12-10 20:54:42,309 INFO ua.biedin.register.util.DatabaseInitializer [restartedMain] CompanyShare(id=1, comment=Humor, capitalSize=5209, USREOU=8710, amount=1, totalFaceValue=7669.85, faceValue=167.27, stateDutyPaid=457.09, releaseDate=2019-12-10 20:54:42.265, isDelete=false) Successfully inserted
+2019-12-10 20:54:42,320 INFO ua.biedin.register.util.DatabaseInitializer [restartedMain] CompanyShare(id=2, comment=Biography/Autobiography, capitalSize=4833, USREOU=5088, amount=1, totalFaceValue=9196.26, faceValue=519.29, stateDutyPaid=145.21, releaseDate=2019-12-10 20:54:42.312, isDelete=false) Successfully inserted
+2019-12-10 20:54:42,331 INFO ua.biedin.register.util.DatabaseInitializer [restartedMain] CompanyShare(id=3, comment=Speech, capitalSize=3481, USREOU=8171, amount=2, totalFaceValue=8926.4, faceValue=256.34, stateDutyPaid=401.92, releaseDate=2019-12-10 20:54:42.323, isDelete=false) Successfully inserted
+2019-12-10 20:54:42,341 INFO ua.biedin.register.util.DatabaseInitializer [restartedMain] CompanyShare(id=4, comment=Narrative nonfiction, capitalSize=2509, USREOU=6199, amount=3, totalFaceValue=7327.42, faceValue=166.28, stateDutyPaid=357.7, releaseDate=2019-12-10 20:54:42.334, isDelete=false) Successfully inserted
+2019-12-10 20:54:42,570 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [restartedMain] SQL Error: 1364, SQLState: HY000
+2019-12-10 20:54:42,570 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [restartedMain] Field 'role_id' doesn't have a default value
+2019-12-10 20:54:42,582 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-10 20:54:42,590 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:787)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:768)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:322)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at ua.biedin.register.RegisterApplication.main(RegisterApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.orm.jpa.JpaSystemException: could not execute statement; nested exception is org.hibernate.exception.GenericJDBCException: could not execute statement
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:353)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:255)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:528)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:242)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:153)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:178)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy115.save(Unknown Source)
+	at ua.biedin.register.util.DatabaseInitializer.run(DatabaseInitializer.java:62)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:784)
+	... 10 common frames omitted
+Caused by: org.hibernate.exception.GenericJDBCException: could not execute statement
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:47)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:200)
+	at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:57)
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:43)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3106)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3699)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:84)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:645)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:282)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:263)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:317)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:335)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:292)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:198)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:128)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:192)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:135)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:62)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:108)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:702)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:688)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:314)
+	at com.sun.proxy.$Proxy106.persist(Unknown Source)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:554)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:371)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:204)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:657)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:621)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:605)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:366)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:99)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	... 19 common frames omitted
+Caused by: java.sql.SQLException: Field 'role_id' doesn't have a default value
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1347)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+	... 62 common frames omitted
+2019-12-10 20:54:42,597 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-10 20:54:42,598 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-10 20:54:42,602 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown initiated...
+2019-12-10 20:54:42,611 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown completed.
+2019-12-10 20:56:28,402 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting RegisterApplication on ihor-notebook with PID 26854 (/home/ihor/IdeaProjects/register/target/classes started by ihor in /home/ihor/IdeaProjects/register)
+2019-12-10 20:56:28,405 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2019-12-10 20:56:28,406 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-12-10 20:56:28,454 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in /home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2019-12-10 20:56:28,454 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-10 20:56:28,455 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-10 20:56:29,258 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2019-12-10 20:56:29,337 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 70ms. Found 3 JPA repository interfaces.
+2019-12-10 20:56:29,675 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-10 20:56:29,943 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 9090 (http)
+2019-12-10 20:56:29,953 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-9090"]
+2019-12-10 20:56:29,953 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2019-12-10 20:56:29,954 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-10 20:56:30,020 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2019-12-10 20:56:30,021 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1566 ms
+2019-12-10 20:56:30,127 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2019-12-10 20:56:30,257 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2019-12-10 20:56:30,966 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOGLOCK
+2019-12-10 20:56:30,973 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOGLOCK
+2019-12-10 20:56:30,976 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT `LOCKED` FROM sharedb.DATABASECHANGELOGLOCK WHERE ID=1
+2019-12-10 20:56:30,991 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Successfully acquired change log lock
+2019-12-10 20:56:32,564 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT MD5SUM FROM sharedb.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2019-12-10 20:56:32,566 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOG
+2019-12-10 20:56:32,568 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Reading from sharedb.DATABASECHANGELOG
+2019-12-10 20:56:32,569 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT * FROM sharedb.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2019-12-10 20:56:32,608 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Successfully released change log lock
+2019-12-10 20:56:32,697 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-12-10 20:56:32,762 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.4.9.Final}
+2019-12-10 20:56:32,857 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-12-10 20:56:32,940 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-12-10 20:56:33,508 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-10 20:56:33,514 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-10 20:56:33,834 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-10 20:56:34,096 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-10 20:56:34,409 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@638eba5b, org.springframework.security.web.context.SecurityContextPersistenceFilter@447f3272, org.springframework.security.web.header.HeaderWriterFilter@321346d5, org.springframework.security.web.authentication.logout.LogoutFilter@1ca84525, ua.biedin.register.security.jwt.JwtTokenFilter@5a84163d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@56a74101, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5b49f26a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4fabe989, org.springframework.security.web.session.SessionManagementFilter@1521c59e, org.springframework.security.web.access.ExceptionTranslationFilter@567ea69a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6bf44460]
+2019-12-10 20:56:34,445 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2019-12-10 20:56:34,477 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-9090"]
+2019-12-10 20:56:34,495 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 9090 (http) with context path ''
+2019-12-10 20:56:34,499 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started RegisterApplication in 6.749 seconds (JVM running for 7.85)
+2019-12-10 20:56:34,727 INFO ua.biedin.register.util.DatabaseInitializer [restartedMain] CompanyShare(id=5, comment=Mythology, capitalSize=1170, USREOU=6432, amount=1, totalFaceValue=6699.43, faceValue=344.34, stateDutyPaid=403.59, releaseDate=2019-12-10 20:56:34.691, isDelete=false) Successfully inserted
+2019-12-10 20:56:34,736 INFO ua.biedin.register.util.DatabaseInitializer [restartedMain] CompanyShare(id=6, comment=Reference book, capitalSize=2589, USREOU=4502, amount=5, totalFaceValue=7999.55, faceValue=316.95, stateDutyPaid=355.94, releaseDate=2019-12-10 20:56:34.729, isDelete=false) Successfully inserted
+2019-12-10 20:56:34,744 INFO ua.biedin.register.util.DatabaseInitializer [restartedMain] CompanyShare(id=7, comment=Biography/Autobiography, capitalSize=2246, USREOU=6871, amount=2, totalFaceValue=6110.97, faceValue=441.65, stateDutyPaid=260.58, releaseDate=2019-12-10 20:56:34.737, isDelete=false) Successfully inserted
+2019-12-10 20:56:34,752 INFO ua.biedin.register.util.DatabaseInitializer [restartedMain] CompanyShare(id=8, comment=Fiction in verse, capitalSize=4973, USREOU=7663, amount=6, totalFaceValue=5788.69, faceValue=243.5, stateDutyPaid=110.71, releaseDate=2019-12-10 20:56:34.746, isDelete=false) Successfully inserted
+2019-12-10 20:56:34,936 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [restartedMain] SQL Error: 1364, SQLState: HY000
+2019-12-10 20:56:34,937 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [restartedMain] Field 'role_id' doesn't have a default value
+2019-12-10 20:56:34,951 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-10 20:56:34,958 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:787)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:768)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:322)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at ua.biedin.register.RegisterApplication.main(RegisterApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.orm.jpa.JpaSystemException: could not execute statement; nested exception is org.hibernate.exception.GenericJDBCException: could not execute statement
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:353)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:255)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:528)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:242)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:153)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:178)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy115.save(Unknown Source)
+	at ua.biedin.register.util.DatabaseInitializer.run(DatabaseInitializer.java:62)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:784)
+	... 10 common frames omitted
+Caused by: org.hibernate.exception.GenericJDBCException: could not execute statement
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:47)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:200)
+	at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:57)
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:43)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3106)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3699)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:84)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:645)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:282)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:263)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:317)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:335)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:292)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:198)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:128)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:192)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:135)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:62)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:108)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:702)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:688)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:314)
+	at com.sun.proxy.$Proxy106.persist(Unknown Source)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:554)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:371)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:204)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:657)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:621)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:605)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:366)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:99)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	... 19 common frames omitted
+Caused by: java.sql.SQLException: Field 'role_id' doesn't have a default value
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1347)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+	... 62 common frames omitted
+2019-12-10 20:56:34,963 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-10 20:56:34,965 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-10 20:56:34,968 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown initiated...
+2019-12-10 20:56:34,977 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown completed.
+2019-12-10 20:58:48,245 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting RegisterApplication on ihor-notebook with PID 27278 (/home/ihor/IdeaProjects/register/target/classes started by ihor in /home/ihor/IdeaProjects/register)
+2019-12-10 20:58:48,249 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2019-12-10 20:58:48,250 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-12-10 20:58:48,297 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in /home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2019-12-10 20:58:48,298 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-10 20:58:48,298 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-10 20:58:49,023 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2019-12-10 20:58:49,102 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 70ms. Found 3 JPA repository interfaces.
+2019-12-10 20:58:49,445 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-10 20:58:49,710 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 9090 (http)
+2019-12-10 20:58:49,719 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-9090"]
+2019-12-10 20:58:49,720 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2019-12-10 20:58:49,720 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-10 20:58:49,786 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2019-12-10 20:58:49,786 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1488 ms
+2019-12-10 20:58:49,891 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2019-12-10 20:58:50,034 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2019-12-10 20:58:50,776 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOGLOCK
+2019-12-10 20:58:50,794 INFO liquibase.logging.core.Slf4jLogger [restartedMain] CREATE TABLE sharedb.DATABASECHANGELOGLOCK (ID INT NOT NULL, `LOCKED` BIT(1) NOT NULL, LOCKGRANTED datetime NULL, LOCKEDBY VARCHAR(255) NULL, CONSTRAINT PK_DATABASECHANGELOGLOCK PRIMARY KEY (ID))
+2019-12-10 20:58:50,828 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOGLOCK
+2019-12-10 20:58:50,837 INFO liquibase.logging.core.Slf4jLogger [restartedMain] DELETE FROM sharedb.DATABASECHANGELOGLOCK
+2019-12-10 20:58:50,838 INFO liquibase.logging.core.Slf4jLogger [restartedMain] INSERT INTO sharedb.DATABASECHANGELOGLOCK (ID, `LOCKED`) VALUES (1, 0)
+2019-12-10 20:58:50,844 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT `LOCKED` FROM sharedb.DATABASECHANGELOGLOCK WHERE ID=1
+2019-12-10 20:58:50,855 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Successfully acquired change log lock
+2019-12-10 20:58:52,394 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Creating database history table with name: sharedb.DATABASECHANGELOG
+2019-12-10 20:58:52,396 INFO liquibase.logging.core.Slf4jLogger [restartedMain] CREATE TABLE sharedb.DATABASECHANGELOG (ID VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, FILENAME VARCHAR(255) NOT NULL, DATEEXECUTED datetime NOT NULL, ORDEREXECUTED INT NOT NULL, EXECTYPE VARCHAR(10) NOT NULL, MD5SUM VARCHAR(35) NULL, `DESCRIPTION` VARCHAR(255) NULL, COMMENTS VARCHAR(255) NULL, TAG VARCHAR(255) NULL, LIQUIBASE VARCHAR(20) NULL, CONTEXTS VARCHAR(255) NULL, LABELS VARCHAR(255) NULL, DEPLOYMENT_ID VARCHAR(10) NULL)
+2019-12-10 20:58:52,424 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOG
+2019-12-10 20:58:52,426 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Reading from sharedb.DATABASECHANGELOG
+2019-12-10 20:58:52,427 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT * FROM sharedb.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2019-12-10 20:58:52,428 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOGLOCK
+2019-12-10 20:58:52,458 INFO liquibase.logging.core.Slf4jLogger [restartedMain] CREATE TABLE sharedb.company_share (id BIGINT AUTO_INCREMENT NOT NULL, comment VARCHAR(255) NULL, capital_size INT NOT NULL, usreou INT NOT NULL, amount INT NOT NULL, total_value numeric NOT NULL, face_value numeric NOT NULL, duty_paid numeric NOT NULL, release_date timestamp DEFAULT NOW() NOT NULL, is_deleted INT DEFAULT 0 NOT NULL, CONSTRAINT PK_COMPANY_SHARE PRIMARY KEY (id), UNIQUE (usreou))
+2019-12-10 20:58:52,488 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Table company_share created
+2019-12-10 20:58:52,489 INFO liquibase.logging.core.Slf4jLogger [restartedMain] ChangeSet classpath:db/changelog/db.changelog-master.yaml::1::ihor_biedin ran successfully in 34ms
+2019-12-10 20:58:52,490 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT MAX(ORDEREXECUTED) FROM sharedb.DATABASECHANGELOG
+2019-12-10 20:58:52,492 INFO liquibase.logging.core.Slf4jLogger [restartedMain] INSERT INTO sharedb.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, `DESCRIPTION`, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('1', 'ihor_biedin', 'classpath:db/changelog/db.changelog-master.yaml', NOW(), 1, '8:c993c3ffcdead7f2120a4e98c390827a', 'createTable tableName=company_share', '', 'EXECUTED', NULL, NULL, '3.8.2', '6004332429')
+2019-12-10 20:58:52,501 INFO liquibase.logging.core.Slf4jLogger [restartedMain] CREATE TABLE sharedb.roles (id BIGINT AUTO_INCREMENT NOT NULL, `role` VARCHAR(10) NOT NULL, CONSTRAINT PK_ROLES PRIMARY KEY (id))
+2019-12-10 20:58:52,532 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Table roles created
+2019-12-10 20:58:52,534 INFO liquibase.logging.core.Slf4jLogger [restartedMain] ChangeSet classpath:db/changelog/db.changelog-master.yaml::2::ihor_biedin ran successfully in 35ms
+2019-12-10 20:58:52,536 INFO liquibase.logging.core.Slf4jLogger [restartedMain] INSERT INTO sharedb.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, `DESCRIPTION`, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('2', 'ihor_biedin', 'classpath:db/changelog/db.changelog-master.yaml', NOW(), 2, '8:dbb996c19277df6926e0749ffe5fdc7c', 'createTable tableName=roles', '', 'EXECUTED', NULL, NULL, '3.8.2', '6004332429')
+2019-12-10 20:58:52,548 INFO liquibase.logging.core.Slf4jLogger [restartedMain] CREATE TABLE sharedb.users (id BIGINT AUTO_INCREMENT NOT NULL, login VARCHAR(50) NOT NULL, password VARCHAR(100) NOT NULL, CONSTRAINT PK_USERS PRIMARY KEY (id), UNIQUE (login))
+2019-12-10 20:58:52,589 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Table users created
+2019-12-10 20:58:52,590 INFO liquibase.logging.core.Slf4jLogger [restartedMain] ChangeSet classpath:db/changelog/db.changelog-master.yaml::3::ihor_biedin ran successfully in 45ms
+2019-12-10 20:58:52,593 INFO liquibase.logging.core.Slf4jLogger [restartedMain] INSERT INTO sharedb.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, `DESCRIPTION`, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('3', 'ihor_biedin', 'classpath:db/changelog/db.changelog-master.yaml', NOW(), 3, '8:5ff028841927628647b221a8465d3a6e', 'createTable tableName=users', '', 'EXECUTED', NULL, NULL, '3.8.2', '6004332429')
+2019-12-10 20:58:52,603 INFO liquibase.logging.core.Slf4jLogger [restartedMain] INSERT INTO sharedb.roles (`role`) VALUES ('ROLE_ADMIN')
+2019-12-10 20:58:52,608 INFO liquibase.logging.core.Slf4jLogger [restartedMain] New row inserted into roles
+2019-12-10 20:58:52,615 INFO liquibase.logging.core.Slf4jLogger [restartedMain] ChangeSet classpath:db/changelog/db.changelog-master.yaml::4::ihor_biedin ran successfully in 14ms
+2019-12-10 20:58:52,620 INFO liquibase.logging.core.Slf4jLogger [restartedMain] INSERT INTO sharedb.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, `DESCRIPTION`, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('4', 'ihor_biedin', 'classpath:db/changelog/db.changelog-master.yaml', NOW(), 4, '8:834c4a3d34c81e6228124b1827610e7e', 'insert tableName=roles', '', 'EXECUTED', NULL, NULL, '3.8.2', '6004332429')
+2019-12-10 20:58:52,631 INFO liquibase.logging.core.Slf4jLogger [restartedMain] INSERT INTO sharedb.roles (`role`) VALUES ('ROLE_USER')
+2019-12-10 20:58:52,635 INFO liquibase.logging.core.Slf4jLogger [restartedMain] New row inserted into roles
+2019-12-10 20:58:52,641 INFO liquibase.logging.core.Slf4jLogger [restartedMain] ChangeSet classpath:db/changelog/db.changelog-master.yaml::5::ihor_biedin ran successfully in 12ms
+2019-12-10 20:58:52,645 INFO liquibase.logging.core.Slf4jLogger [restartedMain] INSERT INTO sharedb.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, `DESCRIPTION`, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('5', 'ihor_biedin', 'classpath:db/changelog/db.changelog-master.yaml', NOW(), 5, '8:5b872e7119d31fd398eee1c37418e3ce', 'insert tableName=roles', '', 'EXECUTED', NULL, NULL, '3.8.2', '6004332429')
+2019-12-10 20:58:52,659 INFO liquibase.logging.core.Slf4jLogger [restartedMain] CREATE TABLE sharedb.user_roles (user_id BIGINT NOT NULL, roles_id BIGINT NOT NULL, CONSTRAINT fk_roles_id FOREIGN KEY (roles_id) REFERENCES sharedb.roles(id), CONSTRAINT fk_user_id FOREIGN KEY (user_id) REFERENCES sharedb.users(id))
+2019-12-10 20:58:52,719 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Table user_roles created
+2019-12-10 20:58:52,721 INFO liquibase.logging.core.Slf4jLogger [restartedMain] ChangeSet classpath:db/changelog/db.changelog-master.yaml::6::ihor_biedin ran successfully in 66ms
+2019-12-10 20:58:52,725 INFO liquibase.logging.core.Slf4jLogger [restartedMain] INSERT INTO sharedb.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, `DESCRIPTION`, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('6', 'ihor_biedin', 'classpath:db/changelog/db.changelog-master.yaml', NOW(), 6, '8:f2a4eaa0c616e74f1853345659fc5ebf', 'createTable tableName=user_roles', '', 'EXECUTED', NULL, NULL, '3.8.2', '6004332429')
+2019-12-10 20:58:52,740 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Successfully released change log lock
+2019-12-10 20:58:52,829 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-12-10 20:58:52,905 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.4.9.Final}
+2019-12-10 20:58:53,001 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-12-10 20:58:53,088 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-12-10 20:58:53,647 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-10 20:58:53,654 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-10 20:58:53,969 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-10 20:58:54,234 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-10 20:58:54,536 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5511547f, org.springframework.security.web.context.SecurityContextPersistenceFilter@725b253a, org.springframework.security.web.header.HeaderWriterFilter@32c0aaac, org.springframework.security.web.authentication.logout.LogoutFilter@71bcaa5c, ua.biedin.register.security.jwt.JwtTokenFilter@59e3f511, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@42cde821, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5f7f96bb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7b8faee6, org.springframework.security.web.session.SessionManagementFilter@4263eb55, org.springframework.security.web.access.ExceptionTranslationFilter@2ff2969e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6c713832]
+2019-12-10 20:58:54,571 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2019-12-10 20:58:54,605 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-9090"]
+2019-12-10 20:58:54,623 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 9090 (http) with context path ''
+2019-12-10 20:58:54,627 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started RegisterApplication in 7.013 seconds (JVM running for 8.092)
+2019-12-10 20:58:54,825 INFO ua.biedin.register.util.DatabaseInitializer [restartedMain] CompanyShare(id=1, comment=Fantasy, capitalSize=1357, USREOU=4337, amount=6, totalFaceValue=5563.93, faceValue=285.81, stateDutyPaid=228.67, releaseDate=2019-12-10 20:58:54.781, isDelete=false) Successfully inserted
+2019-12-10 20:58:54,834 INFO ua.biedin.register.util.DatabaseInitializer [restartedMain] CompanyShare(id=2, comment=Reference book, capitalSize=5158, USREOU=6675, amount=9, totalFaceValue=8568.56, faceValue=475.15, stateDutyPaid=382.86, releaseDate=2019-12-10 20:58:54.827, isDelete=false) Successfully inserted
+2019-12-10 20:58:54,844 INFO ua.biedin.register.util.DatabaseInitializer [restartedMain] CompanyShare(id=3, comment=Biography/Autobiography, capitalSize=472, USREOU=5752, amount=7, totalFaceValue=9863.37, faceValue=286.65, stateDutyPaid=394.77, releaseDate=2019-12-10 20:58:54.836, isDelete=false) Successfully inserted
+2019-12-10 20:58:54,852 INFO ua.biedin.register.util.DatabaseInitializer [restartedMain] CompanyShare(id=4, comment=Fairy tale, capitalSize=5709, USREOU=8328, amount=2, totalFaceValue=6527.99, faceValue=155.82, stateDutyPaid=499.77, releaseDate=2019-12-10 20:58:54.846, isDelete=false) Successfully inserted
+2019-12-10 20:58:55,063 INFO org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl [restartedMain] HHH000010: On release of batch it still contained JDBC statements
+2019-12-10 20:58:55,070 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-10 20:58:55,077 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:787)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:768)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:322)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at ua.biedin.register.RegisterApplication.main(RegisterApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.dao.InvalidDataAccessApiUsageException: org.hibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing: ua.biedin.register.entity.Roles; nested exception is java.lang.IllegalStateException: org.hibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing: ua.biedin.register.entity.Roles
+	at org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:371)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:257)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:538)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:744)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:712)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:631)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:385)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:99)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:178)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy115.save(Unknown Source)
+	at ua.biedin.register.util.DatabaseInitializer.run(DatabaseInitializer.java:62)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:784)
+	... 10 common frames omitted
+Caused by: java.lang.IllegalStateException: org.hibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing: ua.biedin.register.entity.Roles
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:151)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:181)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:188)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1348)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:435)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3221)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2389)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:447)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:534)
+	... 26 common frames omitted
+Caused by: org.hibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing: ua.biedin.register.entity.Roles
+	at org.hibernate.engine.internal.ForeignKeys.getEntityIdentifierIfNotUnsaved(ForeignKeys.java:347)
+	at org.hibernate.type.EntityType.getIdentifier(EntityType.java:495)
+	at org.hibernate.type.EntityType.nullSafeSet(EntityType.java:280)
+	at org.hibernate.persister.collection.AbstractCollectionPersister.writeElement(AbstractCollectionPersister.java:927)
+	at org.hibernate.persister.collection.AbstractCollectionPersister.recreate(AbstractCollectionPersister.java:1349)
+	at org.hibernate.action.internal.CollectionRecreateAction.execute(CollectionRecreateAction.java:52)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604)
+	at org.hibernate.engine.spi.ActionQueue.lambda$executeActions$1(ActionQueue.java:478)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:475)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:348)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:108)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1344)
+	... 35 common frames omitted
+2019-12-10 20:58:55,083 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-10 20:58:55,084 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-10 20:58:55,089 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown initiated...
+2019-12-10 20:58:55,098 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown completed.
+2019-12-10 21:00:47,958 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting RegisterApplication on ihor-notebook with PID 27573 (/home/ihor/IdeaProjects/register/target/classes started by ihor in /home/ihor/IdeaProjects/register)
+2019-12-10 21:00:47,962 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2019-12-10 21:00:47,963 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-12-10 21:00:48,025 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in /home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2019-12-10 21:00:48,026 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-10 21:00:48,026 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-10 21:00:48,732 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2019-12-10 21:00:48,803 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 63ms. Found 3 JPA repository interfaces.
+2019-12-10 21:00:49,131 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-10 21:00:49,417 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 9090 (http)
+2019-12-10 21:00:49,426 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-9090"]
+2019-12-10 21:00:49,427 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2019-12-10 21:00:49,427 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-10 21:00:49,490 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2019-12-10 21:00:49,490 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1464 ms
+2019-12-10 21:00:49,595 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2019-12-10 21:00:49,728 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2019-12-10 21:00:50,450 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOGLOCK
+2019-12-10 21:00:50,457 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOGLOCK
+2019-12-10 21:00:50,459 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT `LOCKED` FROM sharedb.DATABASECHANGELOGLOCK WHERE ID=1
+2019-12-10 21:00:50,476 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Successfully acquired change log lock
+2019-12-10 21:00:52,028 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT MD5SUM FROM sharedb.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2019-12-10 21:00:52,030 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOG
+2019-12-10 21:00:52,031 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Reading from sharedb.DATABASECHANGELOG
+2019-12-10 21:00:52,032 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT * FROM sharedb.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2019-12-10 21:00:52,063 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Successfully released change log lock
+2019-12-10 21:00:52,133 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-12-10 21:00:52,184 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.4.9.Final}
+2019-12-10 21:00:52,274 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-12-10 21:00:52,359 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-12-10 21:00:52,941 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-10 21:00:52,947 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-10 21:00:53,272 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-10 21:00:53,535 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-10 21:00:53,844 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3ca3215e, org.springframework.security.web.context.SecurityContextPersistenceFilter@356b8f4b, org.springframework.security.web.header.HeaderWriterFilter@4ebb72f1, org.springframework.security.web.authentication.logout.LogoutFilter@2092b61b, ua.biedin.register.security.jwt.JwtTokenFilter@2239a527, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7ef34258, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@64f56979, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@95d1baf, org.springframework.security.web.session.SessionManagementFilter@20641041, org.springframework.security.web.access.ExceptionTranslationFilter@6f39bf63, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@196688fb]
+2019-12-10 21:00:53,879 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2019-12-10 21:00:53,912 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-9090"]
+2019-12-10 21:00:53,930 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 9090 (http) with context path ''
+2019-12-10 21:00:53,933 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started RegisterApplication in 6.665 seconds (JVM running for 7.801)
+2019-12-10 21:00:54,158 INFO ua.biedin.register.util.DatabaseInitializer [restartedMain] CompanyShare(id=5, comment=Short story, capitalSize=4537, USREOU=4350, amount=8, totalFaceValue=8244.52, faceValue=477.74, stateDutyPaid=438.03, releaseDate=2019-12-10 21:00:54.113, isDelete=false) Successfully inserted
+2019-12-10 21:00:54,168 INFO ua.biedin.register.util.DatabaseInitializer [restartedMain] CompanyShare(id=6, comment=Fanfiction, capitalSize=251, USREOU=5768, amount=4, totalFaceValue=9154.01, faceValue=144.65, stateDutyPaid=188.08, releaseDate=2019-12-10 21:00:54.16, isDelete=false) Successfully inserted
+2019-12-10 21:00:54,177 INFO ua.biedin.register.util.DatabaseInitializer [restartedMain] CompanyShare(id=7, comment=Mystery, capitalSize=3748, USREOU=8440, amount=7, totalFaceValue=8770.94, faceValue=295.45, stateDutyPaid=168.58, releaseDate=2019-12-10 21:00:54.17, isDelete=false) Successfully inserted
+2019-12-10 21:00:54,187 INFO ua.biedin.register.util.DatabaseInitializer [restartedMain] CompanyShare(id=8, comment=Historical fiction, capitalSize=224, USREOU=7753, amount=3, totalFaceValue=5068.89, faceValue=563.58, stateDutyPaid=469.93, releaseDate=2019-12-10 21:00:54.179, isDelete=false) Successfully inserted
+2019-12-10 21:00:54,391 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [restartedMain] SQL Error: 1054, SQLState: 42S22
+2019-12-10 21:00:54,392 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [restartedMain] Unknown column 'name' in 'field list'
+2019-12-10 21:00:54,404 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-10 21:00:54,412 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:787)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:768)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:322)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at ua.biedin.register.RegisterApplication.main(RegisterApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.dao.InvalidDataAccessResourceUsageException: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:281)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:255)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:528)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:242)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:153)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:178)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy115.save(Unknown Source)
+	at ua.biedin.register.util.DatabaseInitializer.run(DatabaseInitializer.java:62)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:784)
+	... 10 common frames omitted
+Caused by: org.hibernate.exception.SQLGrammarException: could not execute statement
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:63)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:200)
+	at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:57)
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:43)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3106)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3699)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:84)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:645)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:282)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:263)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:317)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:335)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:292)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:198)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:128)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:192)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:135)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:118)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:726)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:694)
+	at org.hibernate.engine.spi.CascadingActions$7.cascade(CascadingActions.java:298)
+	at org.hibernate.engine.internal.Cascade.cascadeToOne(Cascade.java:492)
+	at org.hibernate.engine.internal.Cascade.cascadeAssociation(Cascade.java:416)
+	at org.hibernate.engine.internal.Cascade.cascadeProperty(Cascade.java:218)
+	at org.hibernate.engine.internal.Cascade.cascadeCollectionElements(Cascade.java:525)
+	at org.hibernate.engine.internal.Cascade.cascadeCollection(Cascade.java:456)
+	at org.hibernate.engine.internal.Cascade.cascadeAssociation(Cascade.java:419)
+	at org.hibernate.engine.internal.Cascade.cascadeProperty(Cascade.java:218)
+	at org.hibernate.engine.internal.Cascade.cascade(Cascade.java:151)
+	at org.hibernate.event.internal.AbstractSaveEventListener.cascadeAfterSave(AbstractSaveEventListener.java:464)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:298)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:198)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:128)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:192)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:135)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:62)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:108)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:702)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:688)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:314)
+	at com.sun.proxy.$Proxy106.persist(Unknown Source)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:554)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:371)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:204)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:657)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:621)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:605)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:366)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:99)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	... 19 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'name' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1347)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+	... 80 common frames omitted
+2019-12-10 21:00:54,417 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-10 21:00:54,419 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-10 21:00:54,422 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown initiated...
+2019-12-10 21:00:54,430 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown completed.
+2019-12-10 21:02:23,341 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting RegisterApplication on ihor-notebook with PID 27879 (/home/ihor/IdeaProjects/register/target/classes started by ihor in /home/ihor/IdeaProjects/register)
+2019-12-10 21:02:23,345 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2019-12-10 21:02:23,345 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-12-10 21:02:23,399 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in /home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2019-12-10 21:02:23,400 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-10 21:02:23,400 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-10 21:02:24,232 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2019-12-10 21:02:24,315 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 74ms. Found 3 JPA repository interfaces.
+2019-12-10 21:02:24,742 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-10 21:02:25,058 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 9090 (http)
+2019-12-10 21:02:25,067 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-9090"]
+2019-12-10 21:02:25,068 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2019-12-10 21:02:25,069 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-10 21:02:25,147 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2019-12-10 21:02:25,147 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1747 ms
+2019-12-10 21:02:25,263 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2019-12-10 21:02:25,427 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2019-12-10 21:02:26,344 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOGLOCK
+2019-12-10 21:02:26,363 INFO liquibase.logging.core.Slf4jLogger [restartedMain] CREATE TABLE sharedb.DATABASECHANGELOGLOCK (ID INT NOT NULL, `LOCKED` BIT(1) NOT NULL, LOCKGRANTED datetime NULL, LOCKEDBY VARCHAR(255) NULL, CONSTRAINT PK_DATABASECHANGELOGLOCK PRIMARY KEY (ID))
+2019-12-10 21:02:26,391 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOGLOCK
+2019-12-10 21:02:26,399 INFO liquibase.logging.core.Slf4jLogger [restartedMain] DELETE FROM sharedb.DATABASECHANGELOGLOCK
+2019-12-10 21:02:26,400 INFO liquibase.logging.core.Slf4jLogger [restartedMain] INSERT INTO sharedb.DATABASECHANGELOGLOCK (ID, `LOCKED`) VALUES (1, 0)
+2019-12-10 21:02:26,406 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT `LOCKED` FROM sharedb.DATABASECHANGELOGLOCK WHERE ID=1
+2019-12-10 21:02:26,416 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Successfully acquired change log lock
+2019-12-10 21:02:27,926 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Creating database history table with name: sharedb.DATABASECHANGELOG
+2019-12-10 21:02:27,928 INFO liquibase.logging.core.Slf4jLogger [restartedMain] CREATE TABLE sharedb.DATABASECHANGELOG (ID VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, FILENAME VARCHAR(255) NOT NULL, DATEEXECUTED datetime NOT NULL, ORDEREXECUTED INT NOT NULL, EXECTYPE VARCHAR(10) NOT NULL, MD5SUM VARCHAR(35) NULL, `DESCRIPTION` VARCHAR(255) NULL, COMMENTS VARCHAR(255) NULL, TAG VARCHAR(255) NULL, LIQUIBASE VARCHAR(20) NULL, CONTEXTS VARCHAR(255) NULL, LABELS VARCHAR(255) NULL, DEPLOYMENT_ID VARCHAR(10) NULL)
+2019-12-10 21:02:27,962 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOG
+2019-12-10 21:02:27,967 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Reading from sharedb.DATABASECHANGELOG
+2019-12-10 21:02:27,969 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT * FROM sharedb.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2019-12-10 21:02:27,972 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOGLOCK
+2019-12-10 21:02:28,050 INFO liquibase.logging.core.Slf4jLogger [restartedMain] CREATE TABLE sharedb.company_share (id BIGINT AUTO_INCREMENT NOT NULL, comment VARCHAR(255) NULL, capital_size INT NOT NULL, usreou INT NOT NULL, amount INT NOT NULL, total_value numeric NOT NULL, face_value numeric NOT NULL, duty_paid numeric NOT NULL, release_date timestamp DEFAULT NOW() NOT NULL, is_deleted INT DEFAULT 0 NOT NULL, CONSTRAINT PK_COMPANY_SHARE PRIMARY KEY (id), UNIQUE (usreou))
+2019-12-10 21:02:28,093 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Table company_share created
+2019-12-10 21:02:28,095 INFO liquibase.logging.core.Slf4jLogger [restartedMain] ChangeSet classpath:db/changelog/db.changelog-master.yaml::1::ihor_biedin ran successfully in 51ms
+2019-12-10 21:02:28,098 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT MAX(ORDEREXECUTED) FROM sharedb.DATABASECHANGELOG
+2019-12-10 21:02:28,102 INFO liquibase.logging.core.Slf4jLogger [restartedMain] INSERT INTO sharedb.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, `DESCRIPTION`, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('1', 'ihor_biedin', 'classpath:db/changelog/db.changelog-master.yaml', NOW(), 1, '8:c993c3ffcdead7f2120a4e98c390827a', 'createTable tableName=company_share', '', 'EXECUTED', NULL, NULL, '3.8.2', '6004547975')
+2019-12-10 21:02:28,115 INFO liquibase.logging.core.Slf4jLogger [restartedMain] CREATE TABLE sharedb.roles (id BIGINT AUTO_INCREMENT NOT NULL, name VARCHAR(10) NOT NULL, CONSTRAINT PK_ROLES PRIMARY KEY (id))
+2019-12-10 21:02:28,152 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Table roles created
+2019-12-10 21:02:28,153 INFO liquibase.logging.core.Slf4jLogger [restartedMain] ChangeSet classpath:db/changelog/db.changelog-master.yaml::2::ihor_biedin ran successfully in 42ms
+2019-12-10 21:02:28,156 INFO liquibase.logging.core.Slf4jLogger [restartedMain] INSERT INTO sharedb.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, `DESCRIPTION`, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('2', 'ihor_biedin', 'classpath:db/changelog/db.changelog-master.yaml', NOW(), 2, '8:2b5dd309dc6cea2a88a6929ced17d5e4', 'createTable tableName=roles', '', 'EXECUTED', NULL, NULL, '3.8.2', '6004547975')
+2019-12-10 21:02:28,167 INFO liquibase.logging.core.Slf4jLogger [restartedMain] CREATE TABLE sharedb.users (id BIGINT AUTO_INCREMENT NOT NULL, login VARCHAR(50) NOT NULL, password VARCHAR(100) NOT NULL, CONSTRAINT PK_USERS PRIMARY KEY (id), UNIQUE (login))
+2019-12-10 21:02:28,213 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Table users created
+2019-12-10 21:02:28,214 INFO liquibase.logging.core.Slf4jLogger [restartedMain] ChangeSet classpath:db/changelog/db.changelog-master.yaml::3::ihor_biedin ran successfully in 49ms
+2019-12-10 21:02:28,217 INFO liquibase.logging.core.Slf4jLogger [restartedMain] INSERT INTO sharedb.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, `DESCRIPTION`, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('3', 'ihor_biedin', 'classpath:db/changelog/db.changelog-master.yaml', NOW(), 3, '8:5ff028841927628647b221a8465d3a6e', 'createTable tableName=users', '', 'EXECUTED', NULL, NULL, '3.8.2', '6004547975')
+2019-12-10 21:02:28,228 INFO liquibase.logging.core.Slf4jLogger [restartedMain] INSERT INTO sharedb.roles (`role`) VALUES ('ROLE_ADMIN')
+2019-12-10 21:02:28,233 ERROR liquibase.logging.core.Slf4jLogger [restartedMain] Change Set classpath:db/changelog/db.changelog-master.yaml::4::ihor_biedin failed.  Error: Unknown column 'role' in 'field list' [Failed SQL: (1054) INSERT INTO sharedb.roles (`role`) VALUES ('ROLE_ADMIN')]
+2019-12-10 21:02:28,244 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Successfully released change log lock
+2019-12-10 21:02:28,250 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.MigrationFailedException: Migration failed for change set classpath:db/changelog/db.changelog-master.yaml::4::ihor_biedin:
+     Reason: liquibase.exception.DatabaseException: Unknown column 'role' in 'field list' [Failed SQL: (1054) INSERT INTO sharedb.roles (`role`) VALUES ('ROLE_ADMIN')]
+2019-12-10 21:02:28,251 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown initiated...
+2019-12-10 21:02:28,263 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown completed.
+2019-12-10 21:02:28,268 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2019-12-10 21:02:28,283 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-10 21:02:28,293 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.MigrationFailedException: Migration failed for change set classpath:db/changelog/db.changelog-master.yaml::4::ihor_biedin:
+     Reason: liquibase.exception.DatabaseException: Unknown column 'role' in 'field list' [Failed SQL: (1054) INSERT INTO sharedb.roles (`role`) VALUES ('ROLE_ADMIN')]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:310)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1108)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at ua.biedin.register.RegisterApplication.main(RegisterApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: liquibase.exception.MigrationFailedException: Migration failed for change set classpath:db/changelog/db.changelog-master.yaml::4::ihor_biedin:
+     Reason: liquibase.exception.DatabaseException: Unknown column 'role' in 'field list' [Failed SQL: (1054) INSERT INTO sharedb.roles (`role`) VALUES ('ROLE_ADMIN')]
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:646)
+	at liquibase.changelog.visitor.UpdateVisitor.visit(UpdateVisitor.java:53)
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:83)
+	at liquibase.Liquibase.update(Liquibase.java:202)
+	at liquibase.Liquibase.update(Liquibase.java:179)
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:366)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:314)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792)
+	... 23 common frames omitted
+Caused by: liquibase.exception.DatabaseException: Unknown column 'role' in 'field list' [Failed SQL: (1054) INSERT INTO sharedb.roles (`role`) VALUES ('ROLE_ADMIN')]
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:402)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:59)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:131)
+	at liquibase.database.AbstractJdbcDatabase.execute(AbstractJdbcDatabase.java:1274)
+	at liquibase.database.AbstractJdbcDatabase.executeStatements(AbstractJdbcDatabase.java:1256)
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:609)
+	... 31 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'role' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:764)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:398)
+	... 36 common frames omitted
+2019-12-10 21:04:43,210 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting RegisterApplication on ihor-notebook with PID 28100 (/home/ihor/IdeaProjects/register/target/classes started by ihor in /home/ihor/IdeaProjects/register)
+2019-12-10 21:04:43,215 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2019-12-10 21:04:43,217 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-12-10 21:04:43,292 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in /home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2019-12-10 21:04:43,293 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-10 21:04:43,294 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-10 21:04:44,133 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2019-12-10 21:04:44,222 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 79ms. Found 3 JPA repository interfaces.
+2019-12-10 21:04:44,592 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-10 21:04:44,909 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 9090 (http)
+2019-12-10 21:04:44,918 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-9090"]
+2019-12-10 21:04:44,919 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2019-12-10 21:04:44,919 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-10 21:04:44,990 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2019-12-10 21:04:44,990 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1696 ms
+2019-12-10 21:04:45,104 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2019-12-10 21:04:45,252 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2019-12-10 21:04:46,038 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOGLOCK
+2019-12-10 21:04:46,060 INFO liquibase.logging.core.Slf4jLogger [restartedMain] CREATE TABLE sharedb.DATABASECHANGELOGLOCK (ID INT NOT NULL, `LOCKED` BIT(1) NOT NULL, LOCKGRANTED datetime NULL, LOCKEDBY VARCHAR(255) NULL, CONSTRAINT PK_DATABASECHANGELOGLOCK PRIMARY KEY (ID))
+2019-12-10 21:04:46,091 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOGLOCK
+2019-12-10 21:04:46,098 INFO liquibase.logging.core.Slf4jLogger [restartedMain] DELETE FROM sharedb.DATABASECHANGELOGLOCK
+2019-12-10 21:04:46,100 INFO liquibase.logging.core.Slf4jLogger [restartedMain] INSERT INTO sharedb.DATABASECHANGELOGLOCK (ID, `LOCKED`) VALUES (1, 0)
+2019-12-10 21:04:46,105 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT `LOCKED` FROM sharedb.DATABASECHANGELOGLOCK WHERE ID=1
+2019-12-10 21:04:46,117 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Successfully acquired change log lock
+2019-12-10 21:04:47,805 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Creating database history table with name: sharedb.DATABASECHANGELOG
+2019-12-10 21:04:47,807 INFO liquibase.logging.core.Slf4jLogger [restartedMain] CREATE TABLE sharedb.DATABASECHANGELOG (ID VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, FILENAME VARCHAR(255) NOT NULL, DATEEXECUTED datetime NOT NULL, ORDEREXECUTED INT NOT NULL, EXECTYPE VARCHAR(10) NOT NULL, MD5SUM VARCHAR(35) NULL, `DESCRIPTION` VARCHAR(255) NULL, COMMENTS VARCHAR(255) NULL, TAG VARCHAR(255) NULL, LIQUIBASE VARCHAR(20) NULL, CONTEXTS VARCHAR(255) NULL, LABELS VARCHAR(255) NULL, DEPLOYMENT_ID VARCHAR(10) NULL)
+2019-12-10 21:04:47,843 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOG
+2019-12-10 21:04:47,849 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Reading from sharedb.DATABASECHANGELOG
+2019-12-10 21:04:47,851 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT * FROM sharedb.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2019-12-10 21:04:47,854 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOGLOCK
+2019-12-10 21:04:47,933 INFO liquibase.logging.core.Slf4jLogger [restartedMain] CREATE TABLE sharedb.company_share (id BIGINT AUTO_INCREMENT NOT NULL, comment VARCHAR(255) NULL, capital_size INT NOT NULL, usreou INT NOT NULL, amount INT NOT NULL, total_value numeric NOT NULL, face_value numeric NOT NULL, duty_paid numeric NOT NULL, release_date timestamp DEFAULT NOW() NOT NULL, is_deleted INT DEFAULT 0 NOT NULL, CONSTRAINT PK_COMPANY_SHARE PRIMARY KEY (id), UNIQUE (usreou))
+2019-12-10 21:04:47,967 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Table company_share created
+2019-12-10 21:04:47,968 INFO liquibase.logging.core.Slf4jLogger [restartedMain] ChangeSet classpath:db/changelog/db.changelog-master.yaml::1::ihor_biedin ran successfully in 39ms
+2019-12-10 21:04:47,970 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT MAX(ORDEREXECUTED) FROM sharedb.DATABASECHANGELOG
+2019-12-10 21:04:47,973 INFO liquibase.logging.core.Slf4jLogger [restartedMain] INSERT INTO sharedb.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, `DESCRIPTION`, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('1', 'ihor_biedin', 'classpath:db/changelog/db.changelog-master.yaml', NOW(), 1, '8:c993c3ffcdead7f2120a4e98c390827a', 'createTable tableName=company_share', '', 'EXECUTED', NULL, NULL, '3.8.2', '6004687857')
+2019-12-10 21:04:47,983 INFO liquibase.logging.core.Slf4jLogger [restartedMain] CREATE TABLE sharedb.roles (id BIGINT AUTO_INCREMENT NOT NULL, name VARCHAR(10) NOT NULL, CONSTRAINT PK_ROLES PRIMARY KEY (id))
+2019-12-10 21:04:48,017 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Table roles created
+2019-12-10 21:04:48,019 INFO liquibase.logging.core.Slf4jLogger [restartedMain] ChangeSet classpath:db/changelog/db.changelog-master.yaml::2::ihor_biedin ran successfully in 37ms
+2019-12-10 21:04:48,022 INFO liquibase.logging.core.Slf4jLogger [restartedMain] INSERT INTO sharedb.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, `DESCRIPTION`, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('2', 'ihor_biedin', 'classpath:db/changelog/db.changelog-master.yaml', NOW(), 2, '8:2b5dd309dc6cea2a88a6929ced17d5e4', 'createTable tableName=roles', '', 'EXECUTED', NULL, NULL, '3.8.2', '6004687857')
+2019-12-10 21:04:48,038 INFO liquibase.logging.core.Slf4jLogger [restartedMain] CREATE TABLE sharedb.users (id BIGINT AUTO_INCREMENT NOT NULL, login VARCHAR(50) NOT NULL, password VARCHAR(100) NOT NULL, CONSTRAINT PK_USERS PRIMARY KEY (id), UNIQUE (login))
+2019-12-10 21:04:48,084 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Table users created
+2019-12-10 21:04:48,086 INFO liquibase.logging.core.Slf4jLogger [restartedMain] ChangeSet classpath:db/changelog/db.changelog-master.yaml::3::ihor_biedin ran successfully in 52ms
+2019-12-10 21:04:48,090 INFO liquibase.logging.core.Slf4jLogger [restartedMain] INSERT INTO sharedb.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, `DESCRIPTION`, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('3', 'ihor_biedin', 'classpath:db/changelog/db.changelog-master.yaml', NOW(), 3, '8:5ff028841927628647b221a8465d3a6e', 'createTable tableName=users', '', 'EXECUTED', NULL, NULL, '3.8.2', '6004687857')
+2019-12-10 21:04:48,104 INFO liquibase.logging.core.Slf4jLogger [restartedMain] CREATE TABLE sharedb.user_roles (user_id BIGINT NOT NULL, roles_id BIGINT NOT NULL, CONSTRAINT fk_roles_id FOREIGN KEY (roles_id) REFERENCES sharedb.roles(id), CONSTRAINT fk_user_id FOREIGN KEY (user_id) REFERENCES sharedb.users(id))
+2019-12-10 21:04:48,152 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Table user_roles created
+2019-12-10 21:04:48,153 INFO liquibase.logging.core.Slf4jLogger [restartedMain] ChangeSet classpath:db/changelog/db.changelog-master.yaml::6::ihor_biedin ran successfully in 52ms
+2019-12-10 21:04:48,154 INFO liquibase.logging.core.Slf4jLogger [restartedMain] INSERT INTO sharedb.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, `DESCRIPTION`, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('6', 'ihor_biedin', 'classpath:db/changelog/db.changelog-master.yaml', NOW(), 4, '8:f2a4eaa0c616e74f1853345659fc5ebf', 'createTable tableName=user_roles', '', 'EXECUTED', NULL, NULL, '3.8.2', '6004687857')
+2019-12-10 21:04:48,174 INFO liquibase.logging.core.Slf4jLogger [restartedMain] INSERT INTO sharedb.roles (name) VALUES ('ROLE_ADMIN')
+2019-12-10 21:04:48,180 INFO liquibase.logging.core.Slf4jLogger [restartedMain] New row inserted into roles
+2019-12-10 21:04:48,189 INFO liquibase.logging.core.Slf4jLogger [restartedMain] ChangeSet classpath:db/changelog/db.changelog-master.yaml::4::ihor_biedin ran successfully in 16ms
+2019-12-10 21:04:48,191 INFO liquibase.logging.core.Slf4jLogger [restartedMain] INSERT INTO sharedb.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, `DESCRIPTION`, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('4', 'ihor_biedin', 'classpath:db/changelog/db.changelog-master.yaml', NOW(), 5, '8:7a5c4ee4850244daa2ad3670fb05c2e1', 'insert tableName=roles', '', 'EXECUTED', NULL, NULL, '3.8.2', '6004687857')
+2019-12-10 21:04:48,202 INFO liquibase.logging.core.Slf4jLogger [restartedMain] INSERT INTO sharedb.roles (name) VALUES ('ROLE_USER')
+2019-12-10 21:04:48,204 INFO liquibase.logging.core.Slf4jLogger [restartedMain] New row inserted into roles
+2019-12-10 21:04:48,210 INFO liquibase.logging.core.Slf4jLogger [restartedMain] ChangeSet classpath:db/changelog/db.changelog-master.yaml::5::ihor_biedin ran successfully in 10ms
+2019-12-10 21:04:48,213 INFO liquibase.logging.core.Slf4jLogger [restartedMain] INSERT INTO sharedb.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, `DESCRIPTION`, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('5', 'ihor_biedin', 'classpath:db/changelog/db.changelog-master.yaml', NOW(), 6, '8:0c5cccf83a9e7619314a0ac2a869b681', 'insert tableName=roles', '', 'EXECUTED', NULL, NULL, '3.8.2', '6004687857')
+2019-12-10 21:04:48,231 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Successfully released change log lock
+2019-12-10 21:04:48,389 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-12-10 21:04:48,453 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.4.9.Final}
+2019-12-10 21:04:48,546 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-12-10 21:04:48,627 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-12-10 21:04:49,238 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-10 21:04:49,245 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-10 21:04:49,571 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-10 21:04:49,846 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-10 21:04:50,145 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5c7d6085, org.springframework.security.web.context.SecurityContextPersistenceFilter@2a921208, org.springframework.security.web.header.HeaderWriterFilter@2de89c23, org.springframework.security.web.authentication.logout.LogoutFilter@367d7b25, ua.biedin.register.security.jwt.JwtTokenFilter@71359c49, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@633322a0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@576c220f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@53bd1be0, org.springframework.security.web.session.SessionManagementFilter@32f1944b, org.springframework.security.web.access.ExceptionTranslationFilter@2edc377c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@17596362]
+2019-12-10 21:04:50,179 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2019-12-10 21:04:50,211 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-9090"]
+2019-12-10 21:04:50,230 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 9090 (http) with context path ''
+2019-12-10 21:04:50,233 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started RegisterApplication in 7.74 seconds (JVM running for 8.751)
+2019-12-10 21:04:50,440 INFO ua.biedin.register.util.DatabaseInitializer [restartedMain] CompanyShare(id=1, comment=Fairy tale, capitalSize=43, USREOU=6612, amount=1, totalFaceValue=5300.86, faceValue=514.84, stateDutyPaid=417.99, releaseDate=2019-12-10 21:04:50.392, isDelete=false) Successfully inserted
+2019-12-10 21:04:50,450 INFO ua.biedin.register.util.DatabaseInitializer [restartedMain] CompanyShare(id=2, comment=Mythology, capitalSize=5180, USREOU=4679, amount=7, totalFaceValue=6214.79, faceValue=269.27, stateDutyPaid=302.17, releaseDate=2019-12-10 21:04:50.442, isDelete=false) Successfully inserted
+2019-12-10 21:04:50,459 INFO ua.biedin.register.util.DatabaseInitializer [restartedMain] CompanyShare(id=3, comment=Crime/Detective, capitalSize=2219, USREOU=8419, amount=5, totalFaceValue=5276.55, faceValue=349.27, stateDutyPaid=370.15, releaseDate=2019-12-10 21:04:50.451, isDelete=false) Successfully inserted
+2019-12-10 21:04:50,467 INFO ua.biedin.register.util.DatabaseInitializer [restartedMain] CompanyShare(id=4, comment=Classic, capitalSize=948, USREOU=6344, amount=8, totalFaceValue=8277.27, faceValue=381.75, stateDutyPaid=495.85, releaseDate=2019-12-10 21:04:50.46, isDelete=false) Successfully inserted
+2019-12-10 21:04:50,667 INFO ua.biedin.register.util.DatabaseInitializer [restartedMain] ADMIN successfully inserted - Don't forget to change the value sharedb to FALSE
+2019-12-10 21:04:50,806 INFO ua.biedin.register.util.DatabaseInitializer [restartedMain] USER successfully inserted - Don't forget to change the value sharedb to FALSE

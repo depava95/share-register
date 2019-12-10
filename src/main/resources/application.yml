@@ -13,12 +13,11 @@ spring:
     hibernate:
       ddl-auto: none
 
+jwt:
+  token:
+     secret: smida
+     expired: 3600000
 
-#ADDITIONAL VALUES
+
+#SET TRUE FOR INSERTING TESTING DATA TO DATABASE (!)
 sharedb: false
-
-
-register:
-  content:
-    pageSize: 10
-# @ConfigurationProperties(prefix="register.content") // int pageSize
