@@ -1,5 +1,5 @@
 databaseChangeLog:
-  - logicalFilePath: /db/changelog/db.changelog-master.yaml
+  - logicalFilePath: classpath:db/changelog/db.changelog-master.yaml
   - changeSet:
       id: 1
       author: ihor_biedin
@@ -55,9 +55,9 @@ databaseChangeLog:
                   constraints:
                     nullable: false
               - column:
-                  name: updated_at
-                  type: timestamp
-                  defaultValueComputed: CURRENT_TIMESTAMP
+                  name: is_deleted
+                  type: INT
+                  defaultValueComputed: 0
                   constraints:
                     nullable: false
 
@@ -109,8 +109,6 @@ databaseChangeLog:
                   name: role_id
                   type: BIGINT
                   constraints:
-                    foreignKeyName: fk_user_id
-                    references: roles(id)
                     nullable: false
 
   - changeSet:
@@ -135,6 +133,27 @@ databaseChangeLog:
                   name: role
                   value: "USER"
 
+  - changeSet:
+      id: 6
+      author: ihor_biedin
+      changes:
+        - createTable:
+            tableName: user_roles
+            columns:
+              - column:
+                  name: user_id
+                  type: BIGINT
+                  constraints:
+                    foreignKeyName: fk_user_id
+                    references: users(id)
+                    nullable: false
+              - column:
+                  name: roles_id
+                  type: BIGINT
+                  constraints:
+                    foreignKeyName: fk_roles_id
+                    references: roles(id)
+                    nullable: false
 
 
 

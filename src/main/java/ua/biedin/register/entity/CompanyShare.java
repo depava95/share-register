@@ -6,6 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
@@ -39,8 +40,8 @@ public class CompanyShare {
     @CreationTimestamp
     @Column(name = "release_date")
     private Timestamp releaseDate;   // Дата создания
-    @Column(name = "updated_at")     // Дата обновления в случае изменения акции.
-    private Timestamp update;        // По умолчанию равна дате создания.
-
+    @Type(type = "org.hibernate.type.NumericBooleanType")
+    @Column(name = "is_deleted")
+    private boolean isDelete;
 
 }

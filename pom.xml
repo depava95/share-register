@@ -16,6 +16,8 @@
 
     <properties>
         <java.version>11</java.version>
+        <faker.version>1.0.1</faker.version>
+        <jsonwebtoken.version>0.8.0</jsonwebtoken.version>
     </properties>
 
     <dependencies>
@@ -65,7 +67,14 @@
         <dependency>
             <groupId>com.github.javafaker</groupId>
             <artifactId>javafaker</artifactId>
-            <version>1.0.1</version>
+            <version>${faker.version}</version>
+        </dependency>
+
+<!--        JWT-->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>${jsonwebtoken.version}</version>
         </dependency>
 
 <!--        TESTING-->
@@ -90,5 +99,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

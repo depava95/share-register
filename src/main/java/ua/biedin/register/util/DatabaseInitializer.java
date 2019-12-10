@@ -8,9 +8,11 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 import ua.biedin.register.entity.CompanyShare;
 import ua.biedin.register.entity.User;
-import ua.biedin.register.entity.UserRole;
+import ua.biedin.register.entity.Roles;
 import ua.biedin.register.repository.CompanyShareRepository;
 import ua.biedin.register.repository.UserRepository;
+
+import java.util.List;
 
 @Component
 @Slf4j
@@ -52,7 +54,6 @@ public class DatabaseInitializer implements CommandLineRunner {
         User admin = User.builder()
                 .login(faker.name().username())
                 .password(faker.internet().password())
-                .role(UserRole.ADMIN)
                 .build();
         userRepo.save(admin);
         log.info("ADMIN successfully inserted - Don't forget to change the value sharedb to FALSE");
@@ -60,7 +61,6 @@ public class DatabaseInitializer implements CommandLineRunner {
         User user = User.builder()
                 .login(faker.name().username())
                 .password(faker.internet().password())
-                .role(UserRole.USER)
                 .build();
         userRepo.save(user);
         log.info("USER successfully inserted - Don't forget to change the value sharedb to FALSE");
