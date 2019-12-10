@@ -102,7 +102,7 @@ databaseChangeLog:
                     nullable: false
               - column:
                   name: password
-                  type: varchar(100)
+                  type: varchar(300)
                   constraints:
                     nullable: false
 

@@ -9,13 +9,13 @@ spring:
   jpa:
     database: mysql
     database-platform: org.hibernate.dialect.MySQL5Dialect
-    show-sql: false
+    show-sql: true
     hibernate:
       ddl-auto: none
 
 jwt:
   token:
-     secret: smida
+     secret: JwtSecretKey
      expired: 3600000
 
 

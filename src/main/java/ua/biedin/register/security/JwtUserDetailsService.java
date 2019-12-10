@@ -9,8 +9,6 @@ import org.springframework.stereotype.Service;
 import ua.biedin.register.entity.User;
 import ua.biedin.register.repository.UserRepository;
 
-import java.util.Optional;
-
 @Slf4j
 @Service
 public class JwtUserDetailsService implements UserDetailsService {
@@ -24,12 +22,11 @@ public class JwtUserDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String login) throws UsernameNotFoundException {
-        Optional<User> user = userRepository.findByLogin(login);
-        if (user.isEmpty()) {
+        User user = userRepository.findUserByLogin(login);
+        if (user == null) {
             throw new UsernameNotFoundException("User " + login + " not found");
-        } else {
-            log.info("IN loadUserByUsername - user with login: {} successfully loaded", login);
-            return new JwtUserDetails(user.get());
         }
+        return new JwtUserDetails(user);
     }
 }
+

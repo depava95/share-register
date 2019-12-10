@@ -22,14 +22,12 @@ public class DatabaseInitializer implements CommandLineRunner {
 
     private final UserRepository userRepo;
     private final CompanyShareRepository companyShareRepo;
-    private final BCryptPasswordEncoder encoder;
 
 
     @Autowired
-    public DatabaseInitializer(UserRepository userRepo, CompanyShareRepository companyShareRepo, BCryptPasswordEncoder encoder) {
+    public DatabaseInitializer(UserRepository userRepo, CompanyShareRepository companyShareRepo) {
         this.userRepo = userRepo;
         this.companyShareRepo = companyShareRepo;
-        this.encoder = encoder;
     }
 
     Faker faker = new Faker();
@@ -56,7 +54,7 @@ public class DatabaseInitializer implements CommandLineRunner {
 
         User admin = User.builder()
                 .login(faker.name().username())
-                .password(encoder.encode(faker.internet().password()))
+                .password(faker.internet().password())
                 .roles(List.of(new Roles("ROLE_ADMIN"), new Roles("ROLE_USER")))
                 .build();
         userRepo.save(admin);
@@ -64,7 +62,7 @@ public class DatabaseInitializer implements CommandLineRunner {
 
         User user = User.builder()
                 .login(faker.name().username())
-                .password(encoder.encode(faker.internet().password()))
+                .password(faker.internet().password())
                 .roles(List.of(new Roles("ROLE_USER")))
                 .build();
         userRepo.save(user);

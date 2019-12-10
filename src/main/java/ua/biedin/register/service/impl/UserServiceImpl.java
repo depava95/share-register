@@ -44,8 +44,12 @@ public class UserServiceImpl implements UserService {
         userRepository.save(user);
         //TODO Добавить всякие проверки и эксепшены
         log.info("User {} successfully registered", user.getLogin());
-
         return user;
+    }
+
+    @Override
+    public void deleteAll() {
+        userRepository.deleteAll();
     }
 
     @Override
@@ -55,9 +59,22 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Optional<User> getUserByLogin(String login) {
-        //TODO Добавить всякие проверки и эксепшены
-        return userRepository.findByLogin(login);
+    public User findByLogin(String login) {
+        return userRepository.findUserByLogin(login);
     }
+
+    @Override
+    public User initJson(User user) {
+        User candidate = User
+                .builder()
+                .login(user.getLogin())
+                .password(encoder.encode(user.getPassword()))
+                .roles(user.getRoles())
+                .build();
+        log.info("in initJson. User created successfully. Info {}", candidate);
+        User save = userRepository.save(candidate);
+        return save;
+    }
+
 
 }

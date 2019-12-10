@@ -10,7 +10,11 @@ public interface UserService {
 
     User register(User user);
 
+    void deleteAll();
+
+    User initJson(User user);
+
     Page<User> findAll(Pageable pageable);
 
-    Optional<User> getUserByLogin(String login);
+    User findByLogin(String login);
 }
