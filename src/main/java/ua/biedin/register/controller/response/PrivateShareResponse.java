@@ -16,7 +16,7 @@ public class PrivateShareResponse {
     private Long id;
     private String comment;
     private Integer capitalSize;
-    private Integer USREOU;
+    private Integer usreou;
     private Integer amount;
     private BigDecimal totalFaceValue;
     private BigDecimal faceValue;

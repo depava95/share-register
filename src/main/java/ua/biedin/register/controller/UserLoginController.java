@@ -14,12 +14,13 @@ import ua.biedin.register.controller.response.UserResponse;
 import ua.biedin.register.entity.User;
 import ua.biedin.register.mappers.UserMapper;
 import ua.biedin.register.service.UserService;
+import ua.biedin.register.util.Constants;
 
 import javax.validation.Valid;
 
 @Slf4j
 @RestController
-@RequestMapping(value = "/api/v1", consumes = "application/json")
+//@RequestMapping(value = "api/v1/", consumes = "application/json")
 public class UserLoginController {
 
 
@@ -30,10 +31,9 @@ public class UserLoginController {
         this.userService = userService;
     }
 
-    @PostMapping("login")
+    @PostMapping(value = "/api/v1/login", produces = "application/json")
     public ResponseEntity<UserTokenResponse> login(@RequestBody UserLoginRequest userLoginRequest) {
         User user = UserMapper.INSTANCE.toUserFromLogin(userLoginRequest);
-
         return new ResponseEntity<>(userService.login(user), HttpStatus.ACCEPTED);
     }
 

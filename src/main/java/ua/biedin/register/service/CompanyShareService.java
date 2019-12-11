@@ -10,10 +10,12 @@ public interface CompanyShareService {
 
     Page<CompanyShare> getPublicDataOfShares(Pageable pageable);
 
-    Page<CompanyShare> getPrivateDataOfShare();
+    Page<CompanyShare> getPrivateDataOfShare(Pageable pageable);
 
-    Page<CompanyShare> getAllSharesByCompany(int usreou, Pageable pageable);
+    Page<CompanyShare> getAllPublicSharesByCompany(int usreou, Pageable pageable);
 
-    CompanyShare editShare(CompanyShare share);
+    Page<CompanyShare> getAllPrivateSharesByCompany(int usreou, Pageable pageable);
+
+    CompanyShare update(Long id, CompanyShare share);
 
 }

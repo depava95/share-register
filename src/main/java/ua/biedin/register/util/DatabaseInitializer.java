@@ -42,7 +42,7 @@ public class DatabaseInitializer implements CommandLineRunner {
             CompanyShare share = CompanyShare.builder()
                     .comment(faker.book().genre())
                     .capitalSize(faker.number().numberBetween(1, 6000))
-                    .USREOU(faker.number().numberBetween(4000, 9000))
+                    .usreou(faker.number().numberBetween(4000, 9000))
                     .amount(faker.number().randomDigitNotZero())
                     .totalFaceValue(BigDecimal.valueOf(faker.number().randomDouble(2, 5000, 10000)))
                     .faceValue(BigDecimal.valueOf(faker.number().randomDouble(2, 100, 600)))

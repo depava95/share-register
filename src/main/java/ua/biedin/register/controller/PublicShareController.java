@@ -1,5 +1,6 @@
 package ua.biedin.register.controller;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -12,8 +13,9 @@ import ua.biedin.register.mappers.CompanyShareMapper;
 import ua.biedin.register.service.CompanyShareService;
 import ua.biedin.register.util.PaginationHelper;
 
+@Slf4j
 @RestController
-@RequestMapping(value = "api/v1/public/", produces = "application/json", consumes = "application/json")
+@RequestMapping(value = "api/v1/public", produces = "application/json", consumes = "application/json")
 public class PublicShareController {
 
     private final CompanyShareService companyShareService;
@@ -44,7 +46,7 @@ public class PublicShareController {
             @RequestParam(required = false, defaultValue = "releaseDate") String sort,
             @RequestParam(required = false, defaultValue = "asc") String direction) {
         Pageable pageable = PaginationHelper.createPagination(size, page, sort, direction);
-        Page<CompanyShare> shares = companyShareService.getAllSharesByCompany(usreou, pageable);
+        Page<CompanyShare> shares = companyShareService.getAllPublicSharesByCompany(usreou, pageable);
         Page<PublicShareResponse> publicShares = shares.map(CompanyShareMapper.INSTANCE::toPublicResponse);
 
         return new ResponseEntity<>(publicShares, HttpStatus.OK);

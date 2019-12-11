@@ -12,12 +12,10 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: update
-
 jwt:
   token:
      secret: SMIDA
      expired: 3600000
-
 
 #SET TRUE FOR INSERTING TESTING DATA TO DATABASE (!)
 sharedb: false

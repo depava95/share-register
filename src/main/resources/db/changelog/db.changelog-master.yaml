@@ -34,17 +34,17 @@ databaseChangeLog:
                     nullable: false
               - column:
                   name: total_value
-                  type: NUMERIC
+                  type: DECIMAL(13,4)
                   constraints:
                     nullable: false
               - column:
                   name: face_value
-                  type: NUMERIC
+                  type: DECIMAL(13,4)
                   constraints:
                     nullable: false
               - column:
                   name: duty_paid
-                  type: NUMERIC
+                  type: DECIMAL(13,4)
                   constraints:
                     nullable: false
               - column:
@@ -126,28 +126,28 @@ databaseChangeLog:
                     foreignKeyName: fk_roles_id
                     references: roles(id)
                     nullable: false
-
-  - changeSet:
-      id: 4
-      author: ihor_biedin
-      changes:
-        - insert:
-            tableName: roles
-            columns:
-              - column:
-                  name: name
-                  value: "ROLE_ADMIN"
-
-  - changeSet:
-      id: 5
-      author: ihor_biedin
-      changes:
-        - insert:
-            tableName: roles
-            columns:
-              - column:
-                  name: name
-                  value: "ROLE_USER"
+#
+#  - changeSet:
+#      id: 4
+#      author: ihor_biedin
+#      changes:
+#        - insert:
+#            tableName: roles
+#            columns:
+#              - column:
+#                  name: name
+#                  value: "ROLE_ADMIN"
+#
+#  - changeSet:
+#      id: 5
+#      author: ihor_biedin
+#      changes:
+#        - insert:
+#            tableName: roles
+#            columns:
+#              - column:
+#                  name: name
+#                  value: "ROLE_USER"
 
 
 

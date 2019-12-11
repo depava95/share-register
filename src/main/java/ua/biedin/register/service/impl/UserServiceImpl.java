@@ -2,11 +2,9 @@ package ua.biedin.register.service.impl;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.AuthenticationException;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import ua.biedin.register.controller.request.UserTokenResponse;
@@ -22,9 +20,7 @@ import ua.biedin.register.util.Constants;
 
 import javax.transaction.Transactional;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @Service
 @Slf4j
@@ -55,7 +51,7 @@ public class UserServiceImpl implements UserService {
         user.setPassword(encoder.encode(user.getPassword()));
         user.setRoles(rolesList);
         User userFromDb = userRepository.save(user);
-        log.info("User {} successfully registered", user.getLogin());
+        log.debug("User {} successfully registered", user.getLogin());
         return userFromDb;
     }
 
@@ -71,7 +67,7 @@ public class UserServiceImpl implements UserService {
     public UserTokenResponse login(User request) {
         try {
             String login = request.getLogin();
-            authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(login, request.getPassword()));
+            authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(request.getLogin(), request.getPassword()));
             User account = userRepository.findUserByLogin(login);
             if (account == null) {
                 throw new UserLoginNotFoundException();
@@ -80,7 +76,7 @@ public class UserServiceImpl implements UserService {
             return UserTokenResponse
                     .builder()
                     .login(login)
-                    .token("Bearer_"+token)
+                    .token("Bearer_" + token)
                     .build();
         } catch (
                 AuthenticationException e) {

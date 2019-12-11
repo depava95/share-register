@@ -9,6 +9,6 @@ import ua.biedin.register.entity.CompanyShare;
 @Repository
 public interface CompanyShareRepository extends JpaRepository<CompanyShare, Long> {
 
-    Page<CompanyShare> findAllByUSREOU(int usreou, Pageable pageable);
+    Page<CompanyShare> findAllByUsreou(int usreou, Pageable pageable);
 
 }

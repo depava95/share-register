@@ -1,4 +1,4 @@
-package ua.biedin.register.controller.response;
+package ua.biedin.register.controller.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -6,16 +6,16 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
-import java.sql.Timestamp;
 
 @Data
-@NoArgsConstructor
 @Builder
+@NoArgsConstructor
 @AllArgsConstructor
-public class PublicShareResponse {
+public class PrivateShareRequest {
+    private String comment;
+    private Integer capitalSize;
     private Integer usreou;
     private Integer amount;
-    private BigDecimal totalFaceValue;
     private BigDecimal faceValue;
-    private Timestamp releaseDate;
+    private BigDecimal stateDutyPaid;
 }
