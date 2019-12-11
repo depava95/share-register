@@ -26,7 +26,6 @@ databaseChangeLog:
                   name: usreou
                   type: INT
                   constraints:
-                    unique: true
                     nullable: false
               - column:
                   name: amount

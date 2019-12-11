@@ -17,7 +17,7 @@ public interface CompanyShareService {
 
     Page<CompanyShare> getPrivateDataOfShare();
 
-    Page<CompanyShare> getAllSharesByCompany (Integer USREOU);
+    Page<CompanyShare> getAllSharesByCompany (Integer USREOU, Pageable pageable);
 
      default Pageable createPagination(int size, int page, String sort, String direction) {
         if (direction.equals(Constants.ASC)) {

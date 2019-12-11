@@ -11,6 +11,5 @@ public interface CompanyShareRepository extends JpaRepository<CompanyShare, Long
 
     Page<CompanyShare> findAllByUSREOU(Integer USREOU, Pageable pageable);
 
-    Page<CompanyShare> findAll(Pageable pageable);
 
 }

@@ -1,11 +1,17 @@
 package ua.biedin.register.dto;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import ua.biedin.register.entity.CompanyShare;
 
 import java.sql.Timestamp;
 
 @Data
+@NoArgsConstructor
+@Builder
+@AllArgsConstructor
 public class PrivateShareResponse {
     private Long id;
     private String comment;

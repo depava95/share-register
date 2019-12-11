@@ -51,8 +51,12 @@ public class CompanyShareServiceImpl implements CompanyShareService {
     }
 
     @Override
-    public Page<CompanyShare> getAllSharesByCompany(Integer USREOU) {
-        return null;
+    public Page<CompanyShare> getAllSharesByCompany(Integer USREOU, Pageable pageable) {
+        Page<CompanyShare> shares = repository.findAllByUSREOU(USREOU, pageable);
+        if (shares.isEmpty()) {
+            throw new NoSharesAvailableException();
+        }
+        return shares;
     }
 
     public static double multiply (int amount, double faceValue) {

@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import ua.biedin.register.dto.UserLoginDTO;
 import ua.biedin.register.dto.UserResponse;
 import ua.biedin.register.entity.User;
+import ua.biedin.register.mappers.UserMapper;
 import ua.biedin.register.security.jwt.JwtTokenProvider;
 import ua.biedin.register.service.UserService;
 
@@ -33,22 +34,15 @@ public class UserLoginController {
 
     @PostMapping(value = "/api/v1/login", consumes = "application/json")
     public ResponseEntity login(@RequestBody UserLoginDTO userLoginDTO) {
-        User user = User.builder()
-                .login(userLoginDTO.getLogin())
-                .password(userLoginDTO.getPassword())
-                .build();
+        User user = UserMapper.INSTANCE.toUserFromLogin(userLoginDTO);
         return userService.login(user, authenticationManager, jwtTokenProvider);
     }
 
     @PostMapping(value = "/api/v1/registration", consumes = "application/json")
     public ResponseEntity<UserResponse> registration(@Valid @RequestBody UserLoginDTO userLoginDTO) {
-        User candidate = User
-                .builder()
-                .login(userLoginDTO.getLogin())
-                .password(userLoginDTO.getPassword())
-                .build();
-        User registration = userService.registration(candidate);
-        UserResponse userResponse = new UserResponse(registration);
+        User user = UserMapper.INSTANCE.toUserFromLogin(userLoginDTO);
+        User registration = userService.registration(user);
+        UserResponse userResponse = UserMapper.INSTANCE.toUserResponse(registration);
         return new ResponseEntity<>(userResponse, HttpStatus.CREATED);
     }
 }
