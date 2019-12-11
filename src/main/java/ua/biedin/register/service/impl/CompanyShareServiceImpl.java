@@ -3,10 +3,17 @@ package ua.biedin.register.service.impl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import ua.biedin.register.entity.CompanyShare;
+import ua.biedin.register.exception.NoSharesAvailableException;
 import ua.biedin.register.repository.CompanyShareRepository;
 import ua.biedin.register.service.CompanyShareService;
+import ua.biedin.register.util.Constants;
+
+import java.util.List;
 
 @Slf4j
 @Service
@@ -30,8 +37,12 @@ public class CompanyShareServiceImpl implements CompanyShareService {
     }
 
     @Override
-    public CompanyShare getPublicDataOfShare() {
-        return null;
+    public Page<CompanyShare> getPublicDataOfShares(Pageable pageable) {
+        Page<CompanyShare> shares = repository.findAll(pageable);
+        if (shares.isEmpty()) {
+            throw new NoSharesAvailableException();
+        }
+        return shares;
     }
 
     @Override
@@ -42,6 +53,10 @@ public class CompanyShareServiceImpl implements CompanyShareService {
     @Override
     public Page<CompanyShare> getAllSharesByCompany(Integer USREOU) {
         return null;
+    }
+
+    public static double multiply (int amount, double faceValue) {
+        return (double) amount * faceValue;
     }
 
 }
