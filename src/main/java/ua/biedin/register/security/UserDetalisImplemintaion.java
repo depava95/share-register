@@ -9,11 +9,11 @@ import ua.biedin.register.entity.User;
 import java.util.Collection;
 import java.util.stream.Collectors;
 
-public class JwtUserDetails implements UserDetails {
+public class UserDetalisImplemintaion implements UserDetails {
 
     private final User user;
 
-    public JwtUserDetails (User user) {
+    public UserDetalisImplemintaion(User user) {
         this.user = user;
     }
 

@@ -1,7 +1,5 @@
 package ua.biedin.register.config;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,7 +11,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import ua.biedin.register.security.JwtUserDetailsService;
+import ua.biedin.register.security.UserDetailsServiceConfig;
 import ua.biedin.register.security.jwt.JwtConfigurer;
 import ua.biedin.register.security.jwt.JwtTokenProvider;
 import ua.biedin.register.util.Constants;
@@ -22,16 +20,11 @@ import ua.biedin.register.util.Constants;
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter implements ApplicationContextAware {
 
-
-    private String PATH_PRIVATE = "/api/v1/private/**";
-
-    private String PATH_PUBLIC = "/api/v1/public/**";
-
     private final JwtTokenProvider jwtTokenProvider;
-    private final JwtUserDetailsService customUserDetailsService;
+    private final UserDetailsServiceConfig customUserDetailsService;
 
     public WebSecurityConfig(JwtTokenProvider jwtTokenProvider,
-                             JwtUserDetailsService customUserDetailsService) {
+                             UserDetailsServiceConfig customUserDetailsService) {
         this.jwtTokenProvider = jwtTokenProvider;
         this.customUserDetailsService = customUserDetailsService;
     }
@@ -50,14 +43,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter implements A
                 .and()
                 .authorizeRequests()
                 .antMatchers("/api/v1/login").permitAll()
-                .antMatchers("api/v1/admin").hasRole("ADMIN")
+                .antMatchers(HttpMethod.GET,"/api/v1/public").permitAll()
+                .antMatchers("api/v1/private").hasAnyRole(Constants.USER_ROLE, Constants.ADMIN_ROLE)
+                .antMatchers(HttpMethod.POST, "api/v1/registration").hasRole(Constants.ADMIN_ROLE)
                 .anyRequest().authenticated()
                 .and()
                 .apply(new JwtConfigurer(jwtTokenProvider));
     }
-
-
-
 
     @Bean
     @Override
@@ -67,6 +59,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter implements A
 
     @Bean
     public BCryptPasswordEncoder bCryptPassword() {
-        return new BCryptPasswordEncoder(11);
+        return new BCryptPasswordEncoder();
     }
 }

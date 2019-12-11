@@ -15,7 +15,7 @@ spring:
 
 jwt:
   token:
-     secret: JwtSecretKey
+     secret: SMIDA
      expired: 3600000
 
 

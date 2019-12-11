@@ -946,3 +946,298 @@ Caused by: java.lang.IllegalArgumentException: role should not start with 'ROLE_
 2019-12-11 01:45:21,708 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringContextShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
 2019-12-11 01:45:21,714 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
 2019-12-11 01:45:21,723 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
+2019-12-11 02:19:11,177 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting RegisterApplication on ihor-notebook with PID 30897 (/home/ihor/IdeaProjects/register/target/classes started by ihor in /home/ihor/IdeaProjects/register)
+2019-12-11 02:19:11,181 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2019-12-11 02:19:11,182 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-12-11 02:19:11,238 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in /home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2019-12-11 02:19:11,239 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-11 02:19:11,239 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-11 02:19:12,050 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2019-12-11 02:19:12,128 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 69ms. Found 3 JPA repository interfaces.
+2019-12-11 02:19:12,495 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-11 02:19:12,767 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 9090 (http)
+2019-12-11 02:19:12,777 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-9090"]
+2019-12-11 02:19:12,777 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2019-12-11 02:19:12,778 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-11 02:19:12,845 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2019-12-11 02:19:12,846 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1606 ms
+2019-12-11 02:19:12,954 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2019-12-11 02:19:13,090 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2019-12-11 02:19:13,845 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOGLOCK
+2019-12-11 02:19:13,853 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOGLOCK
+2019-12-11 02:19:13,856 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT `LOCKED` FROM sharedb.DATABASECHANGELOGLOCK WHERE ID=1
+2019-12-11 02:19:13,917 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Successfully acquired change log lock
+2019-12-11 02:19:15,614 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT MD5SUM FROM sharedb.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2019-12-11 02:19:15,615 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOG
+2019-12-11 02:19:15,617 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Reading from sharedb.DATABASECHANGELOG
+2019-12-11 02:19:15,617 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT * FROM sharedb.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2019-12-11 02:19:15,650 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Successfully released change log lock
+2019-12-11 02:19:15,910 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-12-11 02:19:16,516 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.4.9.Final}
+2019-12-11 02:19:16,716 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-12-11 02:19:16,817 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-12-11 02:19:17,448 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-11 02:19:17,454 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-11 02:19:17,808 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-11 02:19:18,071 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@26dd3364, org.springframework.security.web.context.SecurityContextPersistenceFilter@51fe5aca, org.springframework.security.web.header.HeaderWriterFilter@7cea1b0c, org.springframework.security.web.authentication.logout.LogoutFilter@5be2df3, ua.biedin.register.security.jwt.JwtTokenFilter@2128a9f1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6162edbf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@14bd59d2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@174e08ed, org.springframework.security.web.session.SessionManagementFilter@348d35c8, org.springframework.security.web.access.ExceptionTranslationFilter@7d5beb59, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1c31604a]
+2019-12-11 02:19:18,215 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-11 02:19:18,482 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2019-12-11 02:19:18,518 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-9090"]
+2019-12-11 02:19:18,546 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 9090 (http) with context path ''
+2019-12-11 02:19:18,551 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started RegisterApplication in 8.138 seconds (JVM running for 9.499)
+2019-12-11 02:20:06,688 INFO org.apache.juli.logging.DirectJDKLog [http-nio-9090-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-11 02:20:06,689 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-9090-exec-2] Initializing Servlet 'dispatcherServlet'
+2019-12-11 02:20:06,704 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-9090-exec-2] Completed initialization in 14 ms
+2019-12-11 02:24:31,488 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-11 02:24:31,493 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringContextShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-11 02:24:31,506 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
+2019-12-11 02:24:31,547 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
+2019-12-11 02:24:39,633 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting RegisterApplication on ihor-notebook with PID 31322 (/home/ihor/IdeaProjects/register/target/classes started by ihor in /home/ihor/IdeaProjects/register)
+2019-12-11 02:24:39,638 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2019-12-11 02:24:39,639 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-12-11 02:24:39,711 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in /home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2019-12-11 02:24:39,712 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-11 02:24:39,713 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-11 02:24:40,632 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2019-12-11 02:24:40,721 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 78ms. Found 3 JPA repository interfaces.
+2019-12-11 02:24:41,080 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-11 02:24:41,365 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 9090 (http)
+2019-12-11 02:24:41,374 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-9090"]
+2019-12-11 02:24:41,375 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2019-12-11 02:24:41,376 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-11 02:24:41,446 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2019-12-11 02:24:41,447 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1734 ms
+2019-12-11 02:24:41,553 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2019-12-11 02:24:41,681 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2019-12-11 02:24:42,454 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOGLOCK
+2019-12-11 02:24:42,462 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOGLOCK
+2019-12-11 02:24:42,465 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT `LOCKED` FROM sharedb.DATABASECHANGELOGLOCK WHERE ID=1
+2019-12-11 02:24:42,481 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Successfully acquired change log lock
+2019-12-11 02:24:44,084 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT MD5SUM FROM sharedb.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2019-12-11 02:24:44,086 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOG
+2019-12-11 02:24:44,087 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Reading from sharedb.DATABASECHANGELOG
+2019-12-11 02:24:44,088 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT * FROM sharedb.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2019-12-11 02:24:44,118 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Successfully released change log lock
+2019-12-11 02:24:44,195 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-12-11 02:24:44,251 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.4.9.Final}
+2019-12-11 02:24:44,366 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-12-11 02:24:44,462 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-12-11 02:24:45,067 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-11 02:24:45,074 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-11 02:24:45,418 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-11 02:24:45,657 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@55c29d79, org.springframework.security.web.context.SecurityContextPersistenceFilter@f72703e, org.springframework.security.web.header.HeaderWriterFilter@61b0e104, org.springframework.security.web.authentication.logout.LogoutFilter@3b7b93ce, ua.biedin.register.security.jwt.JwtTokenFilter@3fb5c289, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1a4e0d8c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@40d79dff, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7154e3d, org.springframework.security.web.session.SessionManagementFilter@3dae02b5, org.springframework.security.web.access.ExceptionTranslationFilter@3ab5d69, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@b35df3]
+2019-12-11 02:24:45,800 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-11 02:24:46,028 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2019-12-11 02:24:46,062 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-9090"]
+2019-12-11 02:24:46,083 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 9090 (http) with context path ''
+2019-12-11 02:24:46,088 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started RegisterApplication in 7.2 seconds (JVM running for 8.418)
+2019-12-11 02:25:07,971 INFO org.apache.juli.logging.DirectJDKLog [http-nio-9090-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-11 02:25:07,973 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-9090-exec-1] Initializing Servlet 'dispatcherServlet'
+2019-12-11 02:25:07,982 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-9090-exec-1] Completed initialization in 9 ms
+2019-12-11 02:32:36,862 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-11 02:32:36,867 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringContextShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-11 02:32:36,878 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
+2019-12-11 02:32:36,909 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
+2019-12-11 02:32:42,917 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting RegisterApplication on ihor-notebook with PID 32151 (/home/ihor/IdeaProjects/register/target/classes started by ihor in /home/ihor/IdeaProjects/register)
+2019-12-11 02:32:42,921 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2019-12-11 02:32:42,922 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-12-11 02:32:42,992 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in /home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2019-12-11 02:32:42,993 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-11 02:32:42,993 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-11 02:32:43,870 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2019-12-11 02:32:43,943 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 65ms. Found 3 JPA repository interfaces.
+2019-12-11 02:32:44,317 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-11 02:32:44,660 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 9090 (http)
+2019-12-11 02:32:44,669 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-9090"]
+2019-12-11 02:32:44,670 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2019-12-11 02:32:44,671 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-11 02:32:44,741 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2019-12-11 02:32:44,742 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1749 ms
+2019-12-11 02:32:44,860 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2019-12-11 02:32:44,995 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2019-12-11 02:32:45,823 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOGLOCK
+2019-12-11 02:32:45,829 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOGLOCK
+2019-12-11 02:32:45,832 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT `LOCKED` FROM sharedb.DATABASECHANGELOGLOCK WHERE ID=1
+2019-12-11 02:32:45,849 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Successfully acquired change log lock
+2019-12-11 02:32:47,494 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT MD5SUM FROM sharedb.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2019-12-11 02:32:47,495 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOG
+2019-12-11 02:32:47,497 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Reading from sharedb.DATABASECHANGELOG
+2019-12-11 02:32:47,498 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT * FROM sharedb.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2019-12-11 02:32:47,529 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Successfully released change log lock
+2019-12-11 02:32:47,610 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-12-11 02:32:47,667 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.4.9.Final}
+2019-12-11 02:32:47,774 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-12-11 02:32:47,874 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-12-11 02:32:48,460 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-11 02:32:48,467 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-11 02:32:48,825 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-11 02:32:49,089 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@20766381, org.springframework.security.web.context.SecurityContextPersistenceFilter@3899b54a, org.springframework.security.web.header.HeaderWriterFilter@526a82cc, org.springframework.security.web.authentication.logout.LogoutFilter@679ec08c, ua.biedin.register.security.jwt.JwtTokenFilter@2ce5ee9a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2393583a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1e4c14fe, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@20550df1, org.springframework.security.web.session.SessionManagementFilter@2d7d5905, org.springframework.security.web.access.ExceptionTranslationFilter@5e5e93e3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4121f04b]
+2019-12-11 02:32:49,262 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-11 02:32:49,521 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2019-12-11 02:32:49,569 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-9090"]
+2019-12-11 02:32:49,611 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 9090 (http) with context path ''
+2019-12-11 02:32:49,614 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started RegisterApplication in 7.46 seconds (JVM running for 8.618)
+2019-12-11 02:33:09,555 INFO org.apache.juli.logging.DirectJDKLog [http-nio-9090-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-11 02:33:09,557 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-9090-exec-1] Initializing Servlet 'dispatcherServlet'
+2019-12-11 02:33:09,567 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-9090-exec-1] Completed initialization in 10 ms
+2019-12-11 02:34:22,962 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-9090-exec-5] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.IncorrectResultSizeDataAccessException: query did not return a unique result: 3; nested exception is javax.persistence.NonUniqueResultException: query did not return a unique result: 3] with root cause
+javax.persistence.NonUniqueResultException: query did not return a unique result: 3
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:128)
+	at org.hibernate.query.internal.AbstractProducedQuery.getSingleResult(AbstractProducedQuery.java:1581)
+	at org.hibernate.query.criteria.internal.compile.CriteriaQueryTypeQueryAdapter.getSingleResult(CriteriaQueryTypeQueryAdapter.java:111)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$SingleEntityExecution.doExecute(JpaQueryExecution.java:196)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:88)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:154)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:142)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:618)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:605)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:366)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:99)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:149)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy121.findByName(Unknown Source)
+	at ua.biedin.register.service.impl.UserServiceImpl.registration(UserServiceImpl.java:39)
+	at ua.biedin.register.controller.LoginController.registration(LoginController.java:71)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at ua.biedin.register.security.jwt.JwtTokenFilter.doFilter(JwtTokenFilter.java:39)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-12-11 02:37:19,538 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-11 02:37:19,543 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringContextShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-11 02:37:19,554 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
+2019-12-11 02:37:19,591 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
+2019-12-11 02:37:25,631 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting RegisterApplication on ihor-notebook with PID 315 (/home/ihor/IdeaProjects/register/target/classes started by ihor in /home/ihor/IdeaProjects/register)
+2019-12-11 02:37:25,635 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2019-12-11 02:37:25,636 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-12-11 02:37:25,710 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in /home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/home/ihor/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2019-12-11 02:37:25,711 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-11 02:37:25,712 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-11 02:37:26,527 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2019-12-11 02:37:26,601 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 65ms. Found 3 JPA repository interfaces.
+2019-12-11 02:37:26,954 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-11 02:37:27,279 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 9090 (http)
+2019-12-11 02:37:27,291 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-9090"]
+2019-12-11 02:37:27,292 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2019-12-11 02:37:27,292 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-11 02:37:27,363 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2019-12-11 02:37:27,364 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1652 ms
+2019-12-11 02:37:27,469 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2019-12-11 02:37:27,605 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2019-12-11 02:37:28,435 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOGLOCK
+2019-12-11 02:37:28,442 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOGLOCK
+2019-12-11 02:37:28,445 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT `LOCKED` FROM sharedb.DATABASECHANGELOGLOCK WHERE ID=1
+2019-12-11 02:37:28,462 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Successfully acquired change log lock
+2019-12-11 02:37:30,125 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT MD5SUM FROM sharedb.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2019-12-11 02:37:30,127 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM sharedb.DATABASECHANGELOG
+2019-12-11 02:37:30,128 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Reading from sharedb.DATABASECHANGELOG
+2019-12-11 02:37:30,129 INFO liquibase.logging.core.Slf4jLogger [restartedMain] SELECT * FROM sharedb.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2019-12-11 02:37:30,161 INFO liquibase.logging.core.Slf4jLogger [restartedMain] Successfully released change log lock
+2019-12-11 02:37:30,233 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-12-11 02:37:30,299 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.4.9.Final}
+2019-12-11 02:37:30,420 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-12-11 02:37:30,512 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-12-11 02:37:31,071 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-11 02:37:31,078 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-11 02:37:31,421 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-11 02:37:31,727 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2908f72e, org.springframework.security.web.context.SecurityContextPersistenceFilter@6d494a12, org.springframework.security.web.header.HeaderWriterFilter@25cb9219, org.springframework.security.web.authentication.logout.LogoutFilter@7fb5b885, ua.biedin.register.security.jwt.JwtTokenFilter@4c0bb4e2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@32a3a8fa, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@54e7b2e4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@71c94ae0, org.springframework.security.web.session.SessionManagementFilter@1c9218c7, org.springframework.security.web.access.ExceptionTranslationFilter@1c0a248f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@724041df]
+2019-12-11 02:37:31,892 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-11 02:37:32,154 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2019-12-11 02:37:32,188 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-9090"]
+2019-12-11 02:37:32,207 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 9090 (http) with context path ''
+2019-12-11 02:37:32,210 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started RegisterApplication in 7.284 seconds (JVM running for 8.417)
+2019-12-11 02:38:10,227 INFO org.apache.juli.logging.DirectJDKLog [http-nio-9090-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-11 02:38:10,228 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-9090-exec-2] Initializing Servlet 'dispatcherServlet'
+2019-12-11 02:38:10,239 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-9090-exec-2] Completed initialization in 11 ms
+2019-12-11 02:38:10,876 INFO ua.biedin.register.service.impl.UserServiceImpl [http-nio-9090-exec-2] User ihor successfully registered
+2019-12-11 02:40:12,337 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-11 02:40:12,339 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringContextShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-11 02:40:12,343 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
+2019-12-11 02:40:12,353 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.

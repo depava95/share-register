@@ -6,6 +6,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import ua.biedin.register.dto.UserResponse;
 import ua.biedin.register.entity.Roles;
 import ua.biedin.register.entity.User;
 import ua.biedin.register.repository.RoleRepository;
@@ -13,6 +14,7 @@ import ua.biedin.register.repository.UserRepository;
 import ua.biedin.register.service.UserService;
 import ua.biedin.register.util.Constants;
 
+import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -33,18 +35,17 @@ public class UserServiceImpl implements UserService {
     }
 
 
+    @Transactional
     @Override
-    public User register(User user) {
-        Roles role = roleRepository.findByName(Constants.USER_ROLE);
+    public User registration(User user) {
+        Roles role = roleRepository.findFirstByName(Constants.ROLE_USER);
         List<Roles> rolesList = new ArrayList<>();
         rolesList.add(role);
-        //TODO Проверить работу кодировки пароля
         user.setPassword(encoder.encode(user.getPassword()));
         user.setRoles(rolesList);
-        userRepository.save(user);
-        //TODO Добавить всякие проверки и эксепшены
+        User userFromDb = userRepository.save(user);
         log.info("User {} successfully registered", user.getLogin());
-        return user;
+        return userFromDb;
     }
 
     @Override
@@ -62,19 +63,5 @@ public class UserServiceImpl implements UserService {
     public User findByLogin(String login) {
         return userRepository.findUserByLogin(login);
     }
-
-    @Override
-    public User initJson(User user) {
-        User candidate = User
-                .builder()
-                .login(user.getLogin())
-                .password(encoder.encode(user.getPassword()))
-                .roles(user.getRoles())
-                .build();
-        log.info("in initJson. User created successfully. Info {}", candidate);
-        User save = userRepository.save(candidate);
-        return save;
-    }
-
 
 }

@@ -5,11 +5,10 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 import ua.biedin.register.entity.CompanyShare;
-import ua.biedin.register.entity.User;
 import ua.biedin.register.entity.Roles;
+import ua.biedin.register.entity.User;
 import ua.biedin.register.repository.CompanyShareRepository;
 import ua.biedin.register.repository.UserRepository;
 
@@ -49,7 +48,7 @@ public class DatabaseInitializer implements CommandLineRunner {
                     .stateDutyPaid(faker.number().randomDouble(2, 100, 500))
                     .build();
             companyShareRepo.save(share);
-            log.info(share.toString().concat(" Successfully inserted"));
+            log.info(share.toString().concat(" successfully inserted!"));
         }
 
         User admin = User.builder()
@@ -58,7 +57,8 @@ public class DatabaseInitializer implements CommandLineRunner {
                 .roles(List.of(new Roles("ROLE_ADMIN"), new Roles("ROLE_USER")))
                 .build();
         userRepo.save(admin);
-        log.info("ADMIN successfully inserted - Don't forget to change the value sharedb to FALSE");
+        log.info("ADMIN successfully inserted - !!!Don't forget to change the value sharedb to FALSE!!!");
+        log.info("LOGIN: {} PASSWORD: {} ---- USE IT FOR LOGIN", admin.getLogin(), admin.getPassword());
 
         User user = User.builder()
                 .login(faker.name().username())
@@ -66,6 +66,7 @@ public class DatabaseInitializer implements CommandLineRunner {
                 .roles(List.of(new Roles("ROLE_USER")))
                 .build();
         userRepo.save(user);
-        log.info("USER successfully inserted - Don't forget to change the value sharedb to FALSE");
+        log.info("USER successfully inserted - !!!Don't forget to change the value sharedb to FALSE!!!");
+        log.info("LOGIN: {} PASSWORD: {} ---- USE IT FOR LOGIN", user.getLogin(), user.getPassword());
     }
 }

@@ -3,15 +3,13 @@ package ua.biedin.register.security.jwt;
 import io.jsonwebtoken.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 import ua.biedin.register.entity.Roles;
 import ua.biedin.register.exception.TokenAuthenticationException;
-import ua.biedin.register.security.JwtUserDetailsService;
+import ua.biedin.register.security.UserDetailsServiceConfig;
 
 import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
@@ -28,11 +26,11 @@ public class JwtTokenProvider {
     @Value("${jwt.token.expired}")
     private long validityInMilliseconds;
 
-    private final JwtUserDetailsService jwtUserDetailsService;
+    private final UserDetailsServiceConfig userDetailsServiceConfig;
 
     @Autowired
-    public JwtTokenProvider(JwtUserDetailsService jwtUserDetailsService) {
-        this.jwtUserDetailsService = jwtUserDetailsService;
+    public JwtTokenProvider(UserDetailsServiceConfig userDetailsServiceConfig) {
+        this.userDetailsServiceConfig = userDetailsServiceConfig;
     }
 
     @PostConstruct
@@ -45,7 +43,7 @@ public class JwtTokenProvider {
     }
 
     public Authentication getAuthentication(String token) {
-        UserDetails userDetails = this.jwtUserDetailsService
+        UserDetails userDetails = this.userDetailsServiceConfig
                 .loadUserByUsername(tokenByUserName(token));
         return new UsernamePasswordAuthenticationToken(userDetails, "",
                 userDetails.getAuthorities());

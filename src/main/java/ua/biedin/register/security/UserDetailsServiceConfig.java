@@ -11,12 +11,12 @@ import ua.biedin.register.repository.UserRepository;
 
 @Slf4j
 @Service
-public class JwtUserDetailsService implements UserDetailsService {
+public class UserDetailsServiceConfig implements UserDetailsService {
 
     private final UserRepository userRepository;
 
     @Autowired
-    public JwtUserDetailsService(UserRepository userRepository) {
+    public UserDetailsServiceConfig(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
@@ -26,7 +26,7 @@ public class JwtUserDetailsService implements UserDetailsService {
         if (user == null) {
             throw new UsernameNotFoundException("User " + login + " not found");
         }
-        return new JwtUserDetails(user);
+        return new UserDetalisImplemintaion(user);
     }
 }
 

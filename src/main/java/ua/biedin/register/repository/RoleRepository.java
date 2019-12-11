@@ -7,6 +7,6 @@ import ua.biedin.register.entity.Roles;
 @Repository
 public interface RoleRepository extends JpaRepository<Roles, Long> {
 
-    Roles findByName(String name);
+    Roles findFirstByName(String name);
 
 }
