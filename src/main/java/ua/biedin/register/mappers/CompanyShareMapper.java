@@ -2,8 +2,8 @@ package ua.biedin.register.mappers;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
-import ua.biedin.register.dto.PrivateShareResponse;
-import ua.biedin.register.dto.PublicShareResponse;
+import ua.biedin.register.controller.response.PrivateShareResponse;
+import ua.biedin.register.controller.response.PublicShareResponse;
 import ua.biedin.register.entity.CompanyShare;
 
 @Mapper
@@ -13,7 +13,7 @@ public interface CompanyShareMapper {
 
     PublicShareResponse toPublicResponse (CompanyShare companyShare);
 
-    PrivateShareResponse toPrivateREsponse (CompanyShare companyShare);
+    PrivateShareResponse toPrivateResponse(CompanyShare companyShare);
 
     CompanyShare toShareFromPublic (PublicShareResponse publicShareResponse);
 

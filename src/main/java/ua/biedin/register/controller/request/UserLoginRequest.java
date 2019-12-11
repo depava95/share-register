@@ -1,4 +1,4 @@
-package ua.biedin.register.dto;
+package ua.biedin.register.controller.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,7 +12,7 @@ import javax.validation.constraints.Size;
 @NoArgsConstructor
 @Builder
 @AllArgsConstructor
-public class UserLoginDTO {
+public class UserLoginRequest {
 
     @NotBlank
     private String login;

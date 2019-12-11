@@ -12,6 +12,7 @@ import ua.biedin.register.entity.User;
 import ua.biedin.register.repository.CompanyShareRepository;
 import ua.biedin.register.repository.UserRepository;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @Component
@@ -43,9 +44,9 @@ public class DatabaseInitializer implements CommandLineRunner {
                     .capitalSize(faker.number().numberBetween(1, 6000))
                     .USREOU(faker.number().numberBetween(4000, 9000))
                     .amount(faker.number().randomDigitNotZero())
-                    .totalFaceValue(faker.number().randomDouble(2, 5000, 10000))
-                    .faceValue(faker.number().randomDouble(2, 100, 600))
-                    .stateDutyPaid(faker.number().randomDouble(2, 100, 500))
+                    .totalFaceValue(BigDecimal.valueOf(faker.number().randomDouble(2, 5000, 10000)))
+                    .faceValue(BigDecimal.valueOf(faker.number().randomDouble(2, 100, 600)))
+                    .stateDutyPaid(BigDecimal.valueOf(faker.number().randomDouble(2, 100, 500)))
                     .build();
             companyShareRepo.save(share);
             log.info(share.toString().concat(" successfully inserted!"));

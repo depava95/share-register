@@ -3,17 +3,12 @@ package ua.biedin.register.service.impl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import ua.biedin.register.entity.CompanyShare;
 import ua.biedin.register.exception.NoSharesAvailableException;
 import ua.biedin.register.repository.CompanyShareRepository;
 import ua.biedin.register.service.CompanyShareService;
-import ua.biedin.register.util.Constants;
-
-import java.util.List;
 
 @Slf4j
 @Service
@@ -28,7 +23,7 @@ public class CompanyShareServiceImpl implements CompanyShareService {
 
     @Override
     public CompanyShare createShare(CompanyShare share) {
-        return null;
+        return repository.save(share);
     }
 
     @Override
@@ -43,6 +38,7 @@ public class CompanyShareServiceImpl implements CompanyShareService {
             throw new NoSharesAvailableException();
         }
         return shares;
+        //TODO LOGi
     }
 
     @Override
@@ -51,16 +47,11 @@ public class CompanyShareServiceImpl implements CompanyShareService {
     }
 
     @Override
-    public Page<CompanyShare> getAllSharesByCompany(Integer USREOU, Pageable pageable) {
-        Page<CompanyShare> shares = repository.findAllByUSREOU(USREOU, pageable);
+    public Page<CompanyShare> getAllSharesByCompany(int usreou, Pageable pageable) {
+        Page<CompanyShare> shares = repository.findAllByUSREOU(usreou, pageable);
         if (shares.isEmpty()) {
             throw new NoSharesAvailableException();
         }
         return shares;
     }
-
-    public static double multiply (int amount, double faceValue) {
-        return (double) amount * faceValue;
-    }
-
 }

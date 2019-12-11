@@ -4,12 +4,12 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import ua.biedin.register.controller.request.UserTokenResponse;
 import ua.biedin.register.entity.Roles;
 import ua.biedin.register.entity.User;
 import ua.biedin.register.exception.InvalidUsernameOrPasswordException;
@@ -33,12 +33,16 @@ public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
     private final RoleRepository roleRepository;
     private final BCryptPasswordEncoder encoder;
+    private final AuthenticationManager authenticationManager;
+    private final JwtTokenProvider jwtTokenProvider;
 
     @Autowired
-    public UserServiceImpl(UserRepository userRepository, RoleRepository roleRepository, BCryptPasswordEncoder encoder) {
+    public UserServiceImpl(UserRepository userRepository, RoleRepository roleRepository, BCryptPasswordEncoder encoder, AuthenticationManager authenticationManager, JwtTokenProvider jwtTokenProvider) {
         this.userRepository = userRepository;
         this.roleRepository = roleRepository;
         this.encoder = encoder;
+        this.authenticationManager = authenticationManager;
+        this.jwtTokenProvider = jwtTokenProvider;
     }
 
 
@@ -64,21 +68,20 @@ public class UserServiceImpl implements UserService {
         return userByLogin;
     }
 
-    public ResponseEntity login(User request, AuthenticationManager authenticationManager, JwtTokenProvider jwtTokenProvider) {
+    public UserTokenResponse login(User request) {
         try {
             String login = request.getLogin();
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(login, request.getPassword()));
             User account = userRepository.findUserByLogin(login);
-
             if (account == null) {
-                throw new UsernameNotFoundException(
-                        "User with username: " + login + " not found");
+                throw new UserLoginNotFoundException();
             }
             String token = jwtTokenProvider.createToken(login, account.getRoles());
-            Map<Object, Object> response = new HashMap<>();
-            response.put("Login", login);
-            response.put("Your token", "Bearer_" + token);
-            return ResponseEntity.ok(response);
+            return UserTokenResponse
+                    .builder()
+                    .login(login)
+                    .token("Bearer_"+token)
+                    .build();
         } catch (
                 AuthenticationException e) {
             throw new InvalidUsernameOrPasswordException();
