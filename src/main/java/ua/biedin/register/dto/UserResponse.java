@@ -5,6 +5,7 @@ import ua.biedin.register.entity.User;
 
 @Data
 public class UserResponse {
+
     Long id;
     String login;
 

@@ -28,13 +28,12 @@ public class JwtTokenFilter extends GenericFilterBean {
         try {
             if (token != null && jwtTokenProvider.validateToken(token)) {
                 Authentication auth = jwtTokenProvider.getAuthentication(token);
-
                 if (auth != null) {
                     SecurityContextHolder.getContext().setAuthentication(auth);
                 }
             }
         } catch (TokenAuthenticationException e) {
-            e.printStackTrace();
+            throw new TokenAuthenticationException("Authentication error");
         }
         filterChain.doFilter(servletRequest, servletResponse);
     }
