@@ -61,7 +61,7 @@ public class DatabaseInitializer implements CommandLineRunner {
                 .roles(List.of(new Roles("ROLE_ADMIN"), new Roles("ROLE_USER")))
                 .build();
         userRepo.save(admin);
-        log.info("ADMIN successfully inserted - !!!Don't forget to change the value sharedb to FALSE!!!");
+        log.info("ADMIN successfully inserted");
         log.info("LOGIN: admin PASSWORD: admin ---- USE IT FOR LOGIN");
 
         User user = User.builder()
@@ -70,7 +70,10 @@ public class DatabaseInitializer implements CommandLineRunner {
                 .roles(List.of(new Roles("ROLE_USER")))
                 .build();
         userRepo.save(user);
-        log.info("USER successfully inserted - !!!Don't forget to change the value sharedb to FALSE!!!");
+        log.info("USER successfully inserted");
         log.info("LOGIN: user PASSWORD: user ---- USE IT FOR LOGIN");
+
+        log.info("ALL DATA WAS INSERTED!");
+        log.info("!!!Don't forget to change the value sharedb to FALSE!!!");
     }
 }

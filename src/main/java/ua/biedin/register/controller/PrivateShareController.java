@@ -18,6 +18,7 @@ import ua.biedin.register.util.Constants;
 import ua.biedin.register.util.PaginationHelper;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @Slf4j
 @RestController
@@ -39,6 +40,7 @@ public class PrivateShareController {
         if (shareFromDb == null) {
             throw new SaveOrUpdateShareException();
         }
+        log.info("Share with {} id is created", shareFromDb.getId());
         return new ResponseEntity<>(CompanyShareMapper.INSTANCE.toPrivateResponse(shareFromDb), HttpStatus.CREATED);
     }
 
@@ -46,21 +48,47 @@ public class PrivateShareController {
     public ResponseEntity<PrivateShareResponse> updateShare(@PathVariable(name = "id") Long id, @RequestBody PrivateShareRequest privateShareRequest) {
         CompanyShare share = CompanyShareMapper.INSTANCE.toShareFromPrivateRequest(privateShareRequest);
         CompanyShare update = companyShareService.update(id, share);
-
+        log.info("Share with {} id is updated", update.getId());
         return new ResponseEntity<>(CompanyShareMapper.INSTANCE.toPrivateResponse(update), HttpStatus.OK);
     }
 
     @GetMapping(value = "share/{id}")
-    public ResponseEntity<Page<Revision<Integer, CompanyShare>>> getAllShares(
+    public ResponseEntity<Page<Revision<Integer, CompanyShare>>> getShareWithHistory(
             @PathVariable(name = "id") Long id,
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size,
             @RequestParam(defaultValue = "releaseDate") String sort,
             @RequestParam(defaultValue = "asc") String direction) {
         Pageable pageable = PaginationHelper.createPagination(size, page, sort, direction);
+        log.info("Trying to loud revisions of share");
 
         return new ResponseEntity<>(companyShareService.getPrivateDataOfShare(id, pageable), HttpStatus.OK);
     }
 
+    @GetMapping(value = "share/company/{usreou}")
+    public ResponseEntity<List<Page<Revision<Integer, CompanyShare>>>> getShareWithHistoryByCompany(
+            @PathVariable(name = "usreou") int usreou,
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size,
+            @RequestParam(defaultValue = "releaseDate") String sort,
+            @RequestParam(defaultValue = "asc") String direction) {
+        Pageable pageable = PaginationHelper.createPagination(size, page, sort, direction);
+        log.info("Revisions of share with {} id company are successfully  louded", usreou);
 
+        return new ResponseEntity<>(companyShareService.getPrivateDataOfShareByCompany(usreou, pageable), HttpStatus.OK);
+    }
+
+    @GetMapping(value = "share")
+    public ResponseEntity<Page<PrivateShareResponse>> getShares(
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size,
+            @RequestParam(defaultValue = "releaseDate") String sort,
+            @RequestParam(defaultValue = "asc") String direction) {
+        Pageable pageable = PaginationHelper.createPagination(size, page, sort, direction);
+        Page<CompanyShare> shares = companyShareService.getPrivateDataOfShares(pageable);
+        Page<PrivateShareResponse> privateShares = shares.map(CompanyShareMapper.INSTANCE::toPrivateResponse);
+        log.info("{} shares are showed", privateShares.getSize());
+
+        return new ResponseEntity<>(privateShares, HttpStatus.OK);
+    }
 }

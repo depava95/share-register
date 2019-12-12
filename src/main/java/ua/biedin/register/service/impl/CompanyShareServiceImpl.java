@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.history.Revision;
-import org.springframework.data.history.Revisions;
 import org.springframework.stereotype.Service;
 import ua.biedin.register.entity.CompanyShare;
 import ua.biedin.register.exception.NoRevisionsAvailableException;
@@ -18,6 +17,8 @@ import ua.biedin.register.service.CompanyShareService;
 import javax.transaction.Transactional;
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Slf4j
@@ -65,7 +66,11 @@ public class CompanyShareServiceImpl implements CompanyShareService {
 
     @Override
     public Page<CompanyShare> getPrivateDataOfShares(Pageable pageable) {
-        return null;
+        Page<CompanyShare> shares = repository.findAll(pageable);
+        if (shares.isEmpty()) {
+            throw new NoSharesAvailableException();
+        }
+        return shares;
     }
 
     @Override
@@ -80,10 +85,23 @@ public class CompanyShareServiceImpl implements CompanyShareService {
     @Override
     public Page<Revision<Integer, CompanyShare>> getPrivateDataOfShare(@NonNull Long id, Pageable pageable) {
         Page<Revision<Integer, CompanyShare>> revisions = repository.findRevisions(id, pageable);
+        log.info("Revisions of share with {} id are successfully loaded", id);
         if (revisions.isEmpty()) {
             throw new NoRevisionsAvailableException();
         }
         return revisions;
+    }
+
+    @Transactional
+    @Override
+    public List<Page<Revision<Integer, CompanyShare>>> getPrivateDataOfShareByCompany(int usreou, Pageable pageable) {
+        List<Page<Revision<Integer, CompanyShare>>> list = new ArrayList<>();
+        List<Long> id = repository.findAllIdByUsreou(usreou);
+        for (Long aLong : id) {
+            list.add(repository.findRevisions(aLong, pageable));
+        }
+        log.info("Revisions of share with {} id company are successfully loaded", usreou);
+        return list;
     }
 
     @Override
@@ -92,11 +110,13 @@ public class CompanyShareServiceImpl implements CompanyShareService {
         if (shares.isEmpty()) {
             throw new NoSharesAvailableException();
         }
+        log.info("Shares with {} id company are successfully loaded", usreou);
         return shares;
     }
 
     @Override
     public Page<CompanyShare> getAllPrivateSharesByCompany(int usreou, Pageable pageable) {
+        //TODO
         return null;
     }
 }

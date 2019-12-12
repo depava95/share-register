@@ -35,6 +35,7 @@ public class PublicShareController {
         Pageable pageable = PaginationHelper.createPagination(size, page, sort, direction);
         Page<CompanyShare> shares = companyShareService.getPublicDataOfShares(pageable);
         Page<PublicShareResponse> publicShares = shares.map(CompanyShareMapper.INSTANCE::toPublicResponse);
+        log.info("{} shares are showed", publicShares.getSize());
 
         return new ResponseEntity<>(publicShares, HttpStatus.OK);
     }
@@ -49,6 +50,7 @@ public class PublicShareController {
         Pageable pageable = PaginationHelper.createPagination(size, page, sort, direction);
         Page<CompanyShare> shares = companyShareService.getAllPublicSharesByCompany(usreou, pageable);
         Page<PublicShareResponse> publicShares = shares.map(CompanyShareMapper.INSTANCE::toPublicResponse);
+        log.info("{} shares by company with {} id are showed", publicShares.getSize(), usreou);
 
         return new ResponseEntity<>(publicShares, HttpStatus.OK);
     }

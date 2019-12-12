@@ -34,8 +34,8 @@ public class UserLoginController {
 
     @PostMapping(value = "login")
     public ResponseEntity<UserTokenResponse> login(@RequestBody UserLoginRequest userLoginRequest) {
+        log.info("Trying to authenticate user");
         User user = UserMapper.INSTANCE.toUserFromLogin(userLoginRequest);
-
         return new ResponseEntity<>(userService.login(user), HttpStatus.ACCEPTED);
     }
 

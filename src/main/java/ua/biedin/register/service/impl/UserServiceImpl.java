@@ -51,7 +51,8 @@ public class UserServiceImpl implements UserService {
         user.setPassword(encoder.encode(user.getPassword()));
         user.setRoles(rolesList);
         User userFromDb = userRepository.save(user);
-        log.debug("User {} successfully registered", user.getLogin());
+        log.info("User successfully registered");
+        log.debug("Login -- {}, Password -- {}", user.getLogin(), user.getPassword());
         return userFromDb;
     }
 
@@ -64,18 +65,6 @@ public class UserServiceImpl implements UserService {
         return userByLogin;
     }
 
-    @Override
-    public User initJson(User user) {
-        User candidate = User
-                .builder()
-                .login(user.getLogin())
-                .password(encoder.encode(user.getPassword()))
-                .roles(user.getRoles())
-                .build();
-        log.info("in initJson. User created successfully. Info {}", candidate);
-        return userRepository.save(candidate);
-    }
-
     public UserTokenResponse login(User request) {
         try {
             String login = request.getLogin();
@@ -85,6 +74,8 @@ public class UserServiceImpl implements UserService {
                 throw new UserLoginNotFoundException();
             }
             String token = jwtTokenProvider.createToken(login, account.getRoles());
+            log.info("User successfully authenticate");
+            log.debug("Login -- {}, Password -- {}", login, request.getPassword());
             return UserTokenResponse
                     .builder()
                     .login(login)
