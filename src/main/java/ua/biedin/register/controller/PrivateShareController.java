@@ -1,10 +1,12 @@
 package ua.biedin.register.controller;
 
+import com.querydsl.core.types.Predicate;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.history.Revision;
+import org.springframework.data.querydsl.binding.QuerydslPredicate;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -65,6 +67,8 @@ public class PrivateShareController {
         return new ResponseEntity<>(companyShareService.getPrivateDataOfShare(id, pageable), HttpStatus.OK);
     }
 
+
+    //TODO Сделать, чтоб возвращал Page (Custom RevisionEntity)
     @GetMapping(value = "share/company/{usreou}")
     public ResponseEntity<List<Page<Revision<Integer, CompanyShare>>>> getShareWithHistoryByCompany(
             @PathVariable(name = "usreou") int usreou,
@@ -74,7 +78,6 @@ public class PrivateShareController {
             @RequestParam(defaultValue = "asc") String direction) {
         Pageable pageable = PaginationHelper.createPagination(size, page, sort, direction);
         log.info("Revisions of share with {} id company are successfully  louded", usreou);
-
         return new ResponseEntity<>(companyShareService.getPrivateDataOfShareByCompany(usreou, pageable), HttpStatus.OK);
     }
 
@@ -84,9 +87,10 @@ public class PrivateShareController {
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size,
             @RequestParam(defaultValue = "releaseDate") String sort,
-            @RequestParam(defaultValue = "asc") String direction) {
+            @RequestParam(defaultValue = "asc") String direction,
+            @QuerydslPredicate(root = CompanyShare.class) Predicate predicate) {
         Pageable pageable = PaginationHelper.createPagination(size, page, sort, direction);
-        Page<CompanyShare> shares = companyShareService.getPrivateDataOfShares(pageable);
+        Page<CompanyShare> shares = companyShareService.getPrivateDataOfShares(predicate, pageable);
         Page<PrivateShareResponse> privateShares = shares.map(CompanyShareMapper.INSTANCE::toPrivateResponse);
         log.info("{} shares are showed", privateShares.getSize());
 

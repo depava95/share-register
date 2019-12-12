@@ -1,5 +1,8 @@
 package ua.biedin.register.util;
 
+import lombok.experimental.UtilityClass;
+
+@UtilityClass
 public class Constants {
 
     public static final String ADMIN_ROLE = "ADMIN";

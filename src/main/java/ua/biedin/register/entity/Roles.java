@@ -18,7 +18,6 @@ public class Roles {
     @NonNull
     @Column(name = "name")
     private String name;
-
     @ToString.Exclude
     @ManyToMany(mappedBy = "roles", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List <User> users;

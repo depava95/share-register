@@ -1,5 +1,6 @@
 package ua.biedin.register.service.impl;
 
+import com.querydsl.core.types.Predicate;
 import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.history.Revision;
 import org.springframework.stereotype.Service;
 import ua.biedin.register.entity.CompanyShare;
+import ua.biedin.register.exception.IncorrectRequestParametersException;
 import ua.biedin.register.exception.NoRevisionsAvailableException;
 import ua.biedin.register.exception.NoSharesAvailableException;
 import ua.biedin.register.exception.SaveOrUpdateShareException;
@@ -56,17 +58,21 @@ public class CompanyShareServiceImpl implements CompanyShareService {
     }
 
     @Override
-    public Page<CompanyShare> getPublicDataOfShares(Pageable pageable) {
-        Page<CompanyShare> shares = repository.findAll(pageable);
-        if (shares.isEmpty()) {
-            throw new NoSharesAvailableException();
+    public Page<CompanyShare> getPublicDataOfShares(Predicate predicate, Pageable pageable) {
+        try {
+            Page<CompanyShare> shares = repository.findAll(predicate, pageable);
+            if (shares.isEmpty()) {
+                throw new NoSharesAvailableException();
+            }
+            return shares;
+        } catch (IllegalArgumentException e) {
+            throw new IncorrectRequestParametersException();
         }
-        return shares;
     }
 
     @Override
-    public Page<CompanyShare> getPrivateDataOfShares(Pageable pageable) {
-        Page<CompanyShare> shares = repository.findAll(pageable);
+    public Page<CompanyShare> getPrivateDataOfShares(Predicate predicate, Pageable pageable) {
+        Page<CompanyShare> shares = repository.findAll(predicate, pageable);
         if (shares.isEmpty()) {
             throw new NoSharesAvailableException();
         }
@@ -80,6 +86,15 @@ public class CompanyShareServiceImpl implements CompanyShareService {
             throw new NoSharesAvailableException();
         }
         return share.get();
+    }
+
+    @Override
+    public Page<CompanyShare> getAllPublicSharesByCompany(int usreou, Pageable pageable) {
+        Page<CompanyShare> shares = repository.findAllByUsreou(usreou, pageable);
+        if (shares.isEmpty()) {
+            throw new NoSharesAvailableException();
+        }
+        return shares;
     }
 
     @Override
@@ -103,16 +118,5 @@ public class CompanyShareServiceImpl implements CompanyShareService {
         }
         log.info("Revisions of share with {} id company are successfully loaded", usreou);
         return list;
-    }
-
-
-    @Override
-    public Page<CompanyShare> getAllPublicSharesByCompany(int usreou, Pageable pageable) {
-        Page<CompanyShare> shares = repository.findAllByUsreou(usreou, pageable);
-        if (shares.isEmpty()) {
-            throw new NoSharesAvailableException();
-        }
-        log.info("Shares with {} id company are successfully loaded", usreou);
-        return shares;
     }
 }

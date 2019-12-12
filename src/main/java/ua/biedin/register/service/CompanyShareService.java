@@ -5,15 +5,16 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.history.Revision;
 import ua.biedin.register.entity.CompanyShare;
 
+import com.querydsl.core.types.Predicate;
 import java.util.List;
 
 public interface CompanyShareService {
 
     CompanyShare createShare(CompanyShare share);
 
-    Page<CompanyShare> getPublicDataOfShares(Pageable pageable);
+    Page<CompanyShare> getPublicDataOfShares(Predicate predicate, Pageable pageable);
 
-    Page<CompanyShare> getPrivateDataOfShares(Pageable pageable);
+    Page<CompanyShare> getPrivateDataOfShares(Predicate predicate, Pageable pageable);
 
     Page<Revision<Integer, CompanyShare>> getPrivateDataOfShare(Long id, Pageable pageable);
 

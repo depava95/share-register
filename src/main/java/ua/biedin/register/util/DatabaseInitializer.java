@@ -1,6 +1,7 @@
 package ua.biedin.register.util;
 
 import com.github.javafaker.Faker;
+import lombok.experimental.UtilityClass;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;

@@ -36,6 +36,11 @@ public class GeneralExceptionHandler extends ResponseEntityExceptionHandler {
         return new ResponseEntity<>(new GeneralException(("There're no revisions available")), HttpStatus.NOT_FOUND);
     }
 
+    @ExceptionHandler(IncorrectRequestParametersException.class)
+    protected ResponseEntity<GeneralException> handleIncorrectRequestParametersException() {
+        return new ResponseEntity<>(new GeneralException(("Incorrect request params! (Use: page, sort, direction etc.)")), HttpStatus.BAD_REQUEST);
+    }
+
     @Data
     @AllArgsConstructor
     private static class GeneralException {

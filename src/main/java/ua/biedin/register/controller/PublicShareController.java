@@ -1,9 +1,11 @@
 package ua.biedin.register.controller;
 
+import com.querydsl.core.types.Predicate;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.querydsl.binding.QuerydslPredicate;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,6 +15,7 @@ import ua.biedin.register.mappers.CompanyShareMapper;
 import ua.biedin.register.service.CompanyShareService;
 import ua.biedin.register.util.Constants;
 import ua.biedin.register.util.PaginationHelper;
+
 
 @Slf4j
 @RestController
@@ -28,12 +31,13 @@ public class PublicShareController {
 
     @GetMapping(value = "share")
     public ResponseEntity<Page<PublicShareResponse>> getShares(
-            @RequestParam(defaultValue = "0") int page,
-            @RequestParam(defaultValue = "10") int size,
-            @RequestParam(defaultValue = "releaseDate") String sort,
-            @RequestParam(defaultValue = "asc") String direction) {
+            @RequestParam(required = false, defaultValue = "0", name = "page") int page,
+            @RequestParam(required = false, defaultValue = "10", name = "size") int size,
+            @RequestParam(required = false, defaultValue = "releaseDate", name = "sort") String sort,
+            @RequestParam(required = false, defaultValue = "asc", name = "direction") String direction,
+            @QuerydslPredicate(root = CompanyShare.class) Predicate predicate) {
         Pageable pageable = PaginationHelper.createPagination(size, page, sort, direction);
-        Page<CompanyShare> shares = companyShareService.getPublicDataOfShares(pageable);
+        Page<CompanyShare> shares = companyShareService.getPublicDataOfShares(predicate, pageable);
         Page<PublicShareResponse> publicShares = shares.map(CompanyShareMapper.INSTANCE::toPublicResponse);
         log.info("{} shares are showed", publicShares.getSize());
 
@@ -43,10 +47,10 @@ public class PublicShareController {
     @GetMapping(value = "share/company/{usreou}")
     public ResponseEntity<Page<PublicShareResponse>> getShares(
             @PathVariable(name = "usreou") int usreou,  // ЕДРПОУ
-            @RequestParam(required = false, defaultValue = "0") int page,
-            @RequestParam(required = false, defaultValue = "10") int size,
-            @RequestParam(required = false, defaultValue = "releaseDate") String sort,
-            @RequestParam(required = false, defaultValue = "asc") String direction) {
+            @RequestParam(required = false, defaultValue = "0", name = "page") int page,
+            @RequestParam(required = false, defaultValue = "10", name = "size") int size,
+            @RequestParam(required = false, defaultValue = "releaseDate", name = "sort") String sort,
+            @RequestParam(required = false, defaultValue = "asc", name = "direction") String direction) {
         Pageable pageable = PaginationHelper.createPagination(size, page, sort, direction);
         Page<CompanyShare> shares = companyShareService.getAllPublicSharesByCompany(usreou, pageable);
         Page<PublicShareResponse> publicShares = shares.map(CompanyShareMapper.INSTANCE::toPublicResponse);

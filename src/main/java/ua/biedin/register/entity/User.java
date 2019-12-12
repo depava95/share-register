@@ -21,8 +21,6 @@ public class User {
     private String login;
     @Column(name = "password")
     private String password;
-
-
     @ToString.Exclude
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(name = "user_roles",
