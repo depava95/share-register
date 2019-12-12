@@ -92,6 +92,7 @@ public class CompanyShareServiceImpl implements CompanyShareService {
         return revisions;
     }
 
+
     @Transactional
     @Override
     public List<Page<Revision<Integer, CompanyShare>>> getPrivateDataOfShareByCompany(int usreou, Pageable pageable) {
@@ -104,6 +105,7 @@ public class CompanyShareServiceImpl implements CompanyShareService {
         return list;
     }
 
+
     @Override
     public Page<CompanyShare> getAllPublicSharesByCompany(int usreou, Pageable pageable) {
         Page<CompanyShare> shares = repository.findAllByUsreou(usreou, pageable);
@@ -112,11 +114,5 @@ public class CompanyShareServiceImpl implements CompanyShareService {
         }
         log.info("Shares with {} id company are successfully loaded", usreou);
         return shares;
-    }
-
-    @Override
-    public Page<CompanyShare> getAllPrivateSharesByCompany(int usreou, Pageable pageable) {
-        //TODO
-        return null;
     }
 }

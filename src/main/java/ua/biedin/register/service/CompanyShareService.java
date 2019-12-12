@@ -23,8 +23,6 @@ public interface CompanyShareService {
 
     Page<CompanyShare> getAllPublicSharesByCompany(int usreou, Pageable pageable);
 
-    Page<CompanyShare> getAllPrivateSharesByCompany(int usreou, Pageable pageable);
-
     CompanyShare update(Long id, CompanyShare share);
 
 

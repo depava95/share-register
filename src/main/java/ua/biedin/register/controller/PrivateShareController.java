@@ -78,8 +78,9 @@ public class PrivateShareController {
         return new ResponseEntity<>(companyShareService.getPrivateDataOfShareByCompany(usreou, pageable), HttpStatus.OK);
     }
 
+
     @GetMapping(value = "share")
-    public ResponseEntity<Page<PrivateShareResponse>> getShares(
+    public ResponseEntity<Page<PrivateShareResponse>> getAllShares(
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size,
             @RequestParam(defaultValue = "releaseDate") String sort,
