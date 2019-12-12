@@ -20,24 +20,26 @@ import javax.validation.Valid;
 
 @Slf4j
 @RestController
-//@RequestMapping(value = "api/v1/", consumes = "application/json")
+@RequestMapping(value = Constants.PATH_API, consumes = "application/json", produces = "application/json")
 public class UserLoginController {
 
 
     private final UserService userService;
+
 
     @Autowired
     public UserLoginController(UserService userService) {
         this.userService = userService;
     }
 
-    @PostMapping(value = "/api/v1/login", produces = "application/json")
+    @PostMapping(value = "login")
     public ResponseEntity<UserTokenResponse> login(@RequestBody UserLoginRequest userLoginRequest) {
         User user = UserMapper.INSTANCE.toUserFromLogin(userLoginRequest);
+
         return new ResponseEntity<>(userService.login(user), HttpStatus.ACCEPTED);
     }
 
-    @PostMapping("registration")
+    @PostMapping(value = "registration")
     public ResponseEntity<UserResponse> registration(@Valid @RequestBody UserLoginRequest userLoginRequest) {
         User user = UserMapper.INSTANCE.toUserFromLogin(userLoginRequest);
         User registration = userService.registration(user);

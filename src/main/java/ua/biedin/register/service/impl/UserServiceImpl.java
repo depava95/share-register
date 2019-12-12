@@ -64,10 +64,22 @@ public class UserServiceImpl implements UserService {
         return userByLogin;
     }
 
+    @Override
+    public User initJson(User user) {
+        User candidate = User
+                .builder()
+                .login(user.getLogin())
+                .password(encoder.encode(user.getPassword()))
+                .roles(user.getRoles())
+                .build();
+        log.info("in initJson. User created successfully. Info {}", candidate);
+        return userRepository.save(candidate);
+    }
+
     public UserTokenResponse login(User request) {
         try {
             String login = request.getLogin();
-            authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(request.getLogin(), request.getPassword()));
+            authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(login, request.getPassword()));
             User account = userRepository.findUserByLogin(login);
             if (account == null) {
                 throw new UserLoginNotFoundException();
@@ -76,7 +88,7 @@ public class UserServiceImpl implements UserService {
             return UserTokenResponse
                     .builder()
                     .login(login)
-                    .token("Bearer_" + token)
+                    .token("Bearer_".concat(token))
                     .build();
         } catch (
                 AuthenticationException e) {

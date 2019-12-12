@@ -17,7 +17,7 @@ import java.math.BigDecimal;
 
 @Slf4j
 @RestController
-@RequestMapping(value = "api/v1/private/", produces = "application/json", consumes = "application/json")
+@RequestMapping(value = Constants.PATH_PRIVATE, produces = "application/json", consumes = "application/json")
 public class PrivateShareController {
 
     private final CompanyShareService companyShareService;
@@ -28,7 +28,7 @@ public class PrivateShareController {
     }
 
     @PostMapping(value = "share")
-    public ResponseEntity<PrivateShareResponse> createShare (PrivateShareRequest privateShareRequest) {
+    public ResponseEntity<PrivateShareResponse> createShare (@RequestBody PrivateShareRequest privateShareRequest) {
         CompanyShare share = CompanyShareMapper.INSTANCE.toShareFromPrivateRequest(privateShareRequest);
         share.setTotalFaceValue(share.getFaceValue().multiply(BigDecimal.valueOf(share.getAmount())));
         CompanyShare shareFromDb = companyShareService.createShare(share);
@@ -39,7 +39,7 @@ public class PrivateShareController {
     }
 
     @PutMapping(value = "share/{id}")
-    public ResponseEntity<PrivateShareResponse> updateShare (@PathVariable(name = "id") Long id, PrivateShareRequest privateShareRequest) {
+    public ResponseEntity<PrivateShareResponse> updateShare (@PathVariable(name = "id") Long id, @RequestBody PrivateShareRequest privateShareRequest) {
         CompanyShare share = CompanyShareMapper.INSTANCE.toShareFromPrivateRequest(privateShareRequest);
         CompanyShare update = companyShareService.update(id, share);
 

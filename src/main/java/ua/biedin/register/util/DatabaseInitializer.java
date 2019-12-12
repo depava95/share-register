@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 import ua.biedin.register.entity.CompanyShare;
 import ua.biedin.register.entity.Roles;
@@ -22,12 +23,14 @@ public class DatabaseInitializer implements CommandLineRunner {
 
     private final UserRepository userRepo;
     private final CompanyShareRepository companyShareRepo;
+    private final BCryptPasswordEncoder encoder;
 
 
     @Autowired
-    public DatabaseInitializer(UserRepository userRepo, CompanyShareRepository companyShareRepo) {
+    public DatabaseInitializer(UserRepository userRepo, CompanyShareRepository companyShareRepo, BCryptPasswordEncoder encoder) {
         this.userRepo = userRepo;
         this.companyShareRepo = companyShareRepo;
+        this.encoder = encoder;
     }
 
     Faker faker = new Faker();
@@ -53,21 +56,21 @@ public class DatabaseInitializer implements CommandLineRunner {
         }
 
         User admin = User.builder()
-                .login(faker.name().username())
-                .password(faker.internet().password())
+                .login("admin")
+                .password(encoder.encode("admin"))
                 .roles(List.of(new Roles("ROLE_ADMIN"), new Roles("ROLE_USER")))
                 .build();
         userRepo.save(admin);
         log.info("ADMIN successfully inserted - !!!Don't forget to change the value sharedb to FALSE!!!");
-        log.info("LOGIN: {} PASSWORD: {} ---- USE IT FOR LOGIN", admin.getLogin(), admin.getPassword());
+        log.info("LOGIN: admin PASSWORD: admin ---- USE IT FOR LOGIN");
 
         User user = User.builder()
-                .login(faker.name().username())
-                .password(faker.internet().password())
+                .login("user")
+                .password(encoder.encode("user"))
                 .roles(List.of(new Roles("ROLE_USER")))
                 .build();
         userRepo.save(user);
         log.info("USER successfully inserted - !!!Don't forget to change the value sharedb to FALSE!!!");
-        log.info("LOGIN: {} PASSWORD: {} ---- USE IT FOR LOGIN", user.getLogin(), user.getPassword());
+        log.info("LOGIN: user PASSWORD: user ---- USE IT FOR LOGIN");
     }
 }

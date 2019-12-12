@@ -11,11 +11,12 @@ import ua.biedin.register.controller.response.PublicShareResponse;
 import ua.biedin.register.entity.CompanyShare;
 import ua.biedin.register.mappers.CompanyShareMapper;
 import ua.biedin.register.service.CompanyShareService;
+import ua.biedin.register.util.Constants;
 import ua.biedin.register.util.PaginationHelper;
 
 @Slf4j
 @RestController
-@RequestMapping(value = "api/v1/public", produces = "application/json", consumes = "application/json")
+@RequestMapping(value = Constants.PATH_PUBLIC, produces = "application/json", consumes = "application/json")
 public class PublicShareController {
 
     private final CompanyShareService companyShareService;

@@ -45,7 +45,6 @@ public class CompanyShareServiceImpl implements CompanyShareService {
         companyShare.get().setCapitalSize(share.getCapitalSize());
         companyShare.get().setComment(share.getComment());
         companyShare.get().setFaceValue(share.getFaceValue());
-        companyShare.get().setId(share.getId());
         companyShare.get().setStateDutyPaid(share.getStateDutyPaid());
         companyShare.get().setUsreou(share.getUsreou());
         return repository.save(companyShare.get());
