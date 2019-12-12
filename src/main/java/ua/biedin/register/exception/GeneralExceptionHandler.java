@@ -31,6 +31,11 @@ public class GeneralExceptionHandler extends ResponseEntityExceptionHandler {
         return new ResponseEntity<>(new GeneralException(("Error save share")), HttpStatus.BAD_REQUEST);
     }
 
+    @ExceptionHandler(NoRevisionsAvailableException.class)
+    protected ResponseEntity<GeneralException> handleNoRevisionsAvailableException() {
+        return new ResponseEntity<>(new GeneralException(("There're no revisions available")), HttpStatus.NOT_FOUND);
+    }
+
     @Data
     @AllArgsConstructor
     private static class GeneralException {

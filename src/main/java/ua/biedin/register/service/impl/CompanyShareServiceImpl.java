@@ -1,11 +1,15 @@
 package ua.biedin.register.service.impl;
 
+import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.history.Revision;
+import org.springframework.data.history.Revisions;
 import org.springframework.stereotype.Service;
 import ua.biedin.register.entity.CompanyShare;
+import ua.biedin.register.exception.NoRevisionsAvailableException;
 import ua.biedin.register.exception.NoSharesAvailableException;
 import ua.biedin.register.exception.SaveOrUpdateShareException;
 import ua.biedin.register.repository.CompanyShareRepository;
@@ -60,8 +64,26 @@ public class CompanyShareServiceImpl implements CompanyShareService {
     }
 
     @Override
-    public Page<CompanyShare> getPrivateDataOfShare(Pageable pageable) {
+    public Page<CompanyShare> getPrivateDataOfShares(Pageable pageable) {
         return null;
+    }
+
+    @Override
+    public CompanyShare getPublicDataOfShare(Long id) {
+        Optional<CompanyShare> share = repository.findById(id);
+        if (share.isEmpty()) {
+            throw new NoSharesAvailableException();
+        }
+        return share.get();
+    }
+
+    @Override
+    public Page<Revision<Integer, CompanyShare>> getPrivateDataOfShare(@NonNull Long id, Pageable pageable) {
+        Page<Revision<Integer, CompanyShare>> revisions = repository.findRevisions(id, pageable);
+        if (revisions.isEmpty()) {
+            throw new NoRevisionsAvailableException();
+        }
+        return revisions;
     }
 
     @Override

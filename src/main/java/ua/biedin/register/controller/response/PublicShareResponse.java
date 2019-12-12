@@ -13,6 +13,7 @@ import java.sql.Timestamp;
 @Builder
 @AllArgsConstructor
 public class PublicShareResponse {
+    private Long id;
     private Integer usreou;
     private Integer amount;
     private BigDecimal totalFaceValue;

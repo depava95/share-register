@@ -52,4 +52,11 @@ public class PublicShareController {
 
         return new ResponseEntity<>(publicShares, HttpStatus.OK);
     }
+
+    @GetMapping(value = "share/{id}")
+    public ResponseEntity<PublicShareResponse> getShare(@PathVariable(name = "id") Long id) {
+        CompanyShare share = companyShareService.getPublicDataOfShare(id);
+        PublicShareResponse shareResponse = CompanyShareMapper.INSTANCE.toPublicResponse(share);
+        return new ResponseEntity<>(shareResponse, HttpStatus.OK);
+    }
 }
