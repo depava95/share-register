@@ -12,9 +12,7 @@ public interface CompanyShareService {
 
     CompanyShare createShare(CompanyShare share);
 
-    Page<CompanyShare> getPublicDataOfShares(Predicate predicate, Pageable pageable);
-
-    Page<CompanyShare> getPrivateDataOfShares(Predicate predicate, Pageable pageable);
+    Page<CompanyShare> getAllShares(Predicate predicate, Pageable pageable);
 
     Page<Revision<Integer, CompanyShare>> getPrivateDataOfShare(Long id, Pageable pageable);
 

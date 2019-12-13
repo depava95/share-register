@@ -1,0 +1,22 @@
+server:
+  port: 9080
+spring:
+  profiles: test
+  datasource:
+    url: jdbc:h2:mem:sharedb?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    driver-class-name: org.h2.Driver
+    username:
+    password:
+  jpa:
+    database: h2
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+jwt:
+  token:
+    secret: SMIDA
+    expired: 3600000
+
+#SET TRUE FOR INSERTING TESTING DATA TO DATABASE (!)
+sharedb: true

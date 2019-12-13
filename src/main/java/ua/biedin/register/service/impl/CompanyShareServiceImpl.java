@@ -9,7 +9,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.history.Revision;
 import org.springframework.stereotype.Service;
 import ua.biedin.register.entity.CompanyShare;
-import ua.biedin.register.exception.IncorrectRequestParametersException;
 import ua.biedin.register.exception.NoRevisionsAvailableException;
 import ua.biedin.register.exception.NoSharesAvailableException;
 import ua.biedin.register.exception.SaveOrUpdateShareException;
@@ -58,25 +57,18 @@ public class CompanyShareServiceImpl implements CompanyShareService {
     }
 
     @Override
-    public Page<CompanyShare> getPublicDataOfShares(Predicate predicate, Pageable pageable) {
-        try {
-            Page<CompanyShare> shares = repository.findAll(predicate, pageable);
-            if (shares.isEmpty()) {
-                throw new NoSharesAvailableException();
-            }
-            return shares;
-        } catch (IllegalArgumentException e) {
-            throw new IncorrectRequestParametersException();
+    public Page<CompanyShare> getAllShares(Predicate predicate, Pageable pageable) {
+        Page<CompanyShare> shares;
+        if (predicate == null) {
+            shares = repository.findAll(pageable);
+        } else {
+            shares = repository.findAll(predicate, pageable);
         }
-    }
-
-    @Override
-    public Page<CompanyShare> getPrivateDataOfShares(Predicate predicate, Pageable pageable) {
-        Page<CompanyShare> shares = repository.findAll(predicate, pageable);
         if (shares.isEmpty()) {
             throw new NoSharesAvailableException();
+        } else {
+            return shares;
         }
-        return shares;
     }
 
     @Override
@@ -106,7 +98,6 @@ public class CompanyShareServiceImpl implements CompanyShareService {
         }
         return revisions;
     }
-
 
     @Transactional
     @Override

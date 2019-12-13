@@ -11,7 +11,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ua.biedin.register.controller.response.PublicShareResponse;
 import ua.biedin.register.entity.CompanyShare;
-import ua.biedin.register.entity.QCompanyShare;
 import ua.biedin.register.mappers.CompanyShareMapper;
 import ua.biedin.register.service.CompanyShareService;
 import ua.biedin.register.util.Constants;
@@ -38,10 +37,7 @@ public class PublicShareController {
             @RequestParam(required = false, defaultValue = "asc", name = "direction") String direction,
             @QuerydslPredicate(root = CompanyShare.class) Predicate predicate) {
         Pageable pageable = PaginationHelper.createPagination(size, page, sort, direction);
-        if (predicate == null) {
-            predicate = QCompanyShare.companyShare.comment.ne("");
-        }
-        Page<CompanyShare> shares = companyShareService.getPublicDataOfShares(predicate, pageable);
+        Page<CompanyShare> shares = companyShareService.getAllShares(predicate, pageable);
         Page<PublicShareResponse> publicShares = shares.map(CompanyShareMapper.INSTANCE::toPublicResponse);
         log.info("{} shares are showed", publicShares.getSize());
 
@@ -67,6 +63,7 @@ public class PublicShareController {
     public ResponseEntity<PublicShareResponse> getShare(@PathVariable(name = "id") Long id) {
         CompanyShare share = companyShareService.getPublicDataOfShare(id);
         PublicShareResponse shareResponse = CompanyShareMapper.INSTANCE.toPublicResponse(share);
+
         return new ResponseEntity<>(shareResponse, HttpStatus.OK);
     }
 }

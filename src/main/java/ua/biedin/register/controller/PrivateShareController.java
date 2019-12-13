@@ -13,8 +13,6 @@ import org.springframework.web.bind.annotation.*;
 import ua.biedin.register.controller.request.PrivateShareRequest;
 import ua.biedin.register.controller.response.PrivateShareResponse;
 import ua.biedin.register.entity.CompanyShare;
-import ua.biedin.register.entity.QCompanyShare;
-import ua.biedin.register.exception.SaveOrUpdateShareException;
 import ua.biedin.register.mappers.CompanyShareMapper;
 import ua.biedin.register.service.CompanyShareService;
 import ua.biedin.register.util.Constants;
@@ -40,10 +38,8 @@ public class PrivateShareController {
         CompanyShare share = CompanyShareMapper.INSTANCE.toShareFromPrivateRequest(privateShareRequest);
         share.setTotalFaceValue(share.getFaceValue().multiply(BigDecimal.valueOf(share.getAmount())));
         CompanyShare shareFromDb = companyShareService.createShare(share);
-        if (shareFromDb == null) {
-            throw new SaveOrUpdateShareException();
-        }
         log.info("Share with {} id is created", shareFromDb.getId());
+
         return new ResponseEntity<>(CompanyShareMapper.INSTANCE.toPrivateResponse(shareFromDb), HttpStatus.CREATED);
     }
 
@@ -52,6 +48,7 @@ public class PrivateShareController {
         CompanyShare share = CompanyShareMapper.INSTANCE.toShareFromPrivateRequest(privateShareRequest);
         CompanyShare update = companyShareService.update(id, share);
         log.info("Share with {} id is updated", update.getId());
+
         return new ResponseEntity<>(CompanyShareMapper.INSTANCE.toPrivateResponse(update), HttpStatus.OK);
     }
 
@@ -79,6 +76,7 @@ public class PrivateShareController {
             @RequestParam(defaultValue = "asc") String direction) {
         Pageable pageable = PaginationHelper.createPagination(size, page, sort, direction);
         log.info("Revisions of share with {} id company are successfully  louded", usreou);
+
         return new ResponseEntity<>(companyShareService.getPrivateDataOfShareByCompany(usreou, pageable), HttpStatus.OK);
     }
 
@@ -91,10 +89,7 @@ public class PrivateShareController {
             @RequestParam(defaultValue = "asc") String direction,
             @QuerydslPredicate(root = CompanyShare.class) Predicate predicate) {
         Pageable pageable = PaginationHelper.createPagination(size, page, sort, direction);
-        if (predicate == null) {
-            predicate = QCompanyShare.companyShare.comment.ne("");
-        }
-        Page<CompanyShare> shares = companyShareService.getPrivateDataOfShares(predicate, pageable);
+        Page<CompanyShare> shares = companyShareService.getAllShares(predicate, pageable);
         Page<PrivateShareResponse> privateShares = shares.map(CompanyShareMapper.INSTANCE::toPrivateResponse);
         log.info("{} shares are showed", privateShares.getSize());
 
