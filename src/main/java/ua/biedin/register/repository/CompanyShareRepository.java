@@ -20,6 +20,7 @@ public interface CompanyShareRepository extends
         QuerydslPredicateExecutor<CompanyShare>, QuerydslBinderCustomizer<QCompanyShare> {
 
 
+    List<CompanyShare> findAllByUsreou(int usreou);
     Page<CompanyShare> findAllByUsreou(int usreou, Pageable pageable);
 
     @Query(value = "SELECT c.id FROM company_share as c WHERE c.usreou = ?", nativeQuery = true)
