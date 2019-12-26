@@ -40,57 +40,61 @@ public class CompanyShareServiceImpl implements CompanyShareService {
 
     @Transactional
     @Override
-    public CompanyShare update(@NotNull Long id, @NotNull CompanyShare share) {
-        share.setTotalFaceValue(share.getFaceValue().multiply(BigDecimal.valueOf(share.getAmount())));
-        Optional<CompanyShare> companyShare = repository.findById(id);
-        if (companyShare.isEmpty()) {
-            throw new SaveOrUpdateShareException();
-        }
-        companyShare.get().setTotalFaceValue(share.getTotalFaceValue());
-        companyShare.get().setAmount(share.getAmount());
-        companyShare.get().setCapitalSize(share.getCapitalSize());
-        companyShare.get().setComment(share.getComment());
-        companyShare.get().setFaceValue(share.getFaceValue());
-        companyShare.get().setStateDutyPaid(share.getStateDutyPaid());
-        companyShare.get().setUsreou(share.getUsreou());
-        return repository.save(companyShare.get());
+    public CompanyShare update(long id, @NotNull CompanyShare share) {
+        CompanyShare companyShare = repository.findById(id).orElseThrow(SaveOrUpdateShareException::new);
+
+        companyShare.setTotalFaceValue(share.getFaceValue().multiply(BigDecimal.valueOf(share.getAmount())));
+        companyShare.setAmount(share.getAmount());
+        companyShare.setCapitalSize(share.getCapitalSize());
+        companyShare.setComment(share.getComment());
+        companyShare.setFaceValue(share.getFaceValue());
+        companyShare.setStateDutyPaid(share.getStateDutyPaid());
+        companyShare.setUsreou(share.getUsreou());
+
+        return repository.save(companyShare);
     }
 
     @Override
-    public Page<CompanyShare> getAllShares(Predicate predicate, Pageable pageable) {
-        Page<CompanyShare> shares;
-        if (predicate == null) {
-            shares = repository.findAll(pageable);
-        } else {
-            shares = repository.findAll(predicate, pageable);
-        }
-        if (shares.isEmpty()) {
-            throw new NoSharesAvailableException();
-        } else {
-            return shares;
-        }
+    public @NotNull List<CompanyShare> getAllShares() {
+        return repository.findAll();
     }
 
     @Override
-    public CompanyShare getPublicDataOfShare(Long id) {
-        Optional<CompanyShare> share = repository.findById(id);
-        if (share.isEmpty()) {
-            throw new NoSharesAvailableException();
-        }
-        return share.get();
+    public @NotNull List<CompanyShare> getAllShares(@NotNull Predicate predicate) {
+        List<CompanyShare> companyShares = new ArrayList<>();
+        repository.findAll(predicate).forEach(companyShares::add);
+
+        return companyShares;
     }
 
     @Override
-    public Page<CompanyShare> getAllPublicSharesByCompany(int usreou, Pageable pageable) {
-        Page<CompanyShare> shares = repository.findAllByUsreou(usreou, pageable);
-        if (shares.isEmpty()) {
-            throw new NoSharesAvailableException();
-        }
-        return shares;
+    public @NotNull Page<CompanyShare> getAllShares(@NotNull Pageable pageable) {
+        return repository.findAll(pageable);
     }
 
     @Override
-    public Page<Revision<Integer, CompanyShare>> getPrivateDataOfShare(@NonNull Long id, Pageable pageable) {
+    public @NotNull Page<CompanyShare> getAllShares(@NotNull Predicate predicate, @NotNull Pageable pageable) {
+        return repository.findAll(predicate, pageable);
+    }
+
+    @Override
+    public @NotNull CompanyShare getPublicDataOfShare(long id) {
+        return repository.findById(id).orElseThrow(NoSharesAvailableException::new);
+    }
+
+    @Override
+    public @NotNull List<CompanyShare> getAllPublicSharesByCompany(int usreou) {
+        return repository.findAllByUsreou(usreou);
+    }
+
+    @Override
+    public @NotNull Page<CompanyShare> getAllPublicSharesByCompany(int usreou, @NotNull Pageable pageable) {
+        return repository.findAllByUsreou(usreou, pageable);
+    }
+
+    @Override
+    // TODO: refactor response object
+    public Page<Revision<Integer, CompanyShare>> getPrivateDataOfShare(@NonNull long id, Pageable pageable) {
         Page<Revision<Integer, CompanyShare>> revisions = repository.findRevisions(id, pageable);
         log.info("Revisions of share with {} id are successfully loaded", id);
         if (revisions.isEmpty()) {
@@ -101,6 +105,7 @@ public class CompanyShareServiceImpl implements CompanyShareService {
 
     @Transactional
     @Override
+    // TODO: refactor response object
     public List<Page<Revision<Integer, CompanyShare>>> getPrivateDataOfShareByCompany(int usreou, Pageable pageable) {
         List<Page<Revision<Integer, CompanyShare>>> list = new ArrayList<>();
         List<Long> id = repository.findAllIdByUsreou(usreou);
